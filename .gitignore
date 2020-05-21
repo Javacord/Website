@@ -1,0 +1,9 @@
+# VuePress
+docs/.vuepress/dist
+
+# Node
+node_modules
+yarn-error.log
+
+# IntelliJ
+.idea
