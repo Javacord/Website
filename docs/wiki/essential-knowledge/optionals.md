@@ -1,43 +1,64 @@
 # Optionals
 
 ::: warning
-This tutorials assumes you are familiar with lambda expressions. Take a look at the [Lambda Introduction](https://javacord.org/wiki/essential-knowledge/lambda-introduction) first, if you are not!
+This tutorials assumes, that you are familiar with lambda expressions.
+Take a look at the [lambda introduction](/wiki/essential-knowledge/lambdas/) first, if you are not!
 :::
 
-The Optional class is widely used in Javacord. Basically, every method which might return a `null` value will return an Optional in Javacord instead. Optionals will help you to avoid NullPointerExceptions and make very clear if a method may not have a result. Here's a small example:
+## :muscle: Motivation
 
-**The old way of doing it**
+The Optional class is widely used in Javacord.
+Basically, every method that might return a `null` value will return an Optional in Javacord instead.
+Optionals help you to avoid `NullPointerExceptions` and make it very clear if a method may not have a result.
+Here's a small example:
+
+### The old way of doing it
+
 ```java
 User user = api.getCachedUserById(123L);
 if (user != null) {
   user.sendMessage("Hi!");
 }
 ```
-**The new way of doing it**
+
+### The new way of doing it
+
 ```java
-api.getCachedUserById(123L).ifPresent(user -> user.sendMessage("Hi!"));
+api.getCachedUserById(123L).ifPresent(user -> 
+  user.sendMessage("Hi!")
+);
 ```
+
+You can imagine an `Optional` like a box :package: that may or may not contain a value.
+Before accessing this value, you have to "unpack" this box first.
 
 ## :open_book: Methods
 
-The Optional class has a ton of useful methods which can all be found in the [JavaDocs](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html). Here's a small explanation of the most important ones:
+The Optional class has many useful methods which can all be found in the [JavaDocs](https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html).
+This tutorial gives a short introduction to the most common ones.
+
 ### get()
 
-This method just returns the value of the Optional. You should only use this method if you are sure that the Optional contains a value, because it throws a `NoSuchElementException` if it does not contain a value.
+The `get` method returns the value of the Optional or throws a `NoSuchElementException` if it does not contain a value.
 
-**Example**
 ```java
 TextChannel channel = api.getTextChannelById(123L).get();
 channel.sendMessage("Hi");
 ```
 
+::: danger
+You should never use this method blindly but only if you are **100%** sure the optional contains a value.
+
+Every time you use this method carelessly, a kitten dies :scream_cat:!
+True story.
+:::
+
 ### isPresent()
 
-This method checks if the Optional contains a value.
+The `isPresent` methods checks, if the Optional contains a value.
 
-**Example**
 ```java
-Optional<TextChannel> channel api.getTextChannelById(123L);
+Optional<TextChannel> channel = api.getTextChannelById(123L);
 if (channel.isPresent()) {
   // A text channel with the id 123 exists. It's safe to call #get() now
   channel.get().sendMessage("Hi");
@@ -46,68 +67,109 @@ if (channel.isPresent()) {
 
 ### orElse(...)
 
-This method returns the value of the Optional or the given "default" value if the Optional does not contain a value.
+The `orElse` methods returns the value of the Optional if it is present. Otherwise, it returns the given default value.
 
-**Example**
 ```java
-String name = user.getNickname(server).orElse(user.getName());
+// The user may not have a nickname on the given server. 
+// In this case, we use the user's "regular" name.
+String displayName = user.getNickname(server).orElse(user.getName());
+```
+The example above is (mostly) equivalent to the example below but much more concise.
+```java
+String displayName = "";
+Optional<String> nickname = user.getNickname(server);
+if (nickname.isPresent()) {
+  displayName = nickname.get();
+} else {
+  displayName = user.getName();
+}
 ```
 
 ::: tip
-In this case you could also just use `user.getDisplayName(server)`
+In this case you can just use `user.getDisplayName(server)` instead.
 :::
 
 ### ifPresent(...)
 
-This is definitely one of the more interesting methods. It takes a [Consumer](https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html) as it's argument which is called if the Optional contains a value. Together with lambda expressions this can be a very handy method.
+The `ifPresent` method is very similar to an `if (value != null) { ... }` check. 
+It takes a [Consumer](https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html) as it's argument.
+This consumer is called if the Optional contains a value.
+Together with lambda expressions this can be a very handy method.
 
-**Example**
 ```java
-api.getTextChannelById(123L).ifPresent(channel -> channel.sendMessage("Hi!"));
+api.getTextChannelById(123L).ifPresent(channel -> {
+  channel.sendMessage("Hi!");
+});
 ```
-
-### map(...)
-
-This methods "converts" the type of an Optional. This might be useful, if the Optional does not contain the final value you need.
-
-**Example**
+The example above is (mostly) equivalent to the example below but more concise.
 ```java
-String currentGame = api.getYourself().getActivity().map(Activity::getName).orElse("None");
+Optional<TextChannel> channel = api.getTextChannelById(123L);
+if (channel.isPresent()) {
+  channel.get().sendMessage("Hi!");
+}
 ```
 
 ### filter(...)
 
-This method filters the value of an Optional for additional criteria. E.g. if you only want a bot user by id.
+The `filter` method filters the Optional for a given criteria.
 
-**Example**
 ```java
-Optional<User> botUser = api.getCachedUserById(123).filter(User::isBot);
+Optional<User> botUser = api.getCachedUserById(123L).filter(User::isBot);
+```
+The example above is equivalent to the example below but more concise.
+```java
+Optional<User> user = api.getCachedUserById(123L);
+Optional<User> botUser;
+if (user.isPresent() && user.get().isBot()) {
+  botUser = user;
+} else {
+  botUser = Optional.empty();
+}
 ```
 
-## :memo: Self-Test
+### map(...)
 
-Just try to understand the following code. If you do, you won't have much trouble with Optionals. It won't get any harder. 🙂
+The `map` method "converts" the type of an Optional.
+This is useful, if the type of an Optional does not contain the final value you need.
+
+The following example gets the name of the bots current activity (the "Playing xyz" status) or "None" if the bot has no current activity.
+
 ```java
-String currentGame = api.getCachedUserById(123)
-        .map(User::getActivity)
-        .filter(Optional::isPresent)
-        .map(Optional::get)
-        .map(Activity::getName)
-        .orElse("None");
+String activityName = api.getYourself().getActivity().map(Activity::getName).orElse("None");
+```
+For better understanding, here's the exact same code but with the types as comments:
+```java
+String activityName =  api.getYourself() // User
+        .getActivity() // Optional<Activity>
+        .map(Activity::getName) // Optional<String>
+        .orElse("None"); // String
 ```
 
-::: tip
-Both `getCachedUserById(...)` and `getActivity(...)` return an Optional
-:::
+### flatMap(...)
 
-::: details Solution
+The `flatMap` method if very similar to the `map` methods.
+It is a used to map values that itself are Optionals to prevent Optional nesting (a "box in a box").
+
 ```java
-String currentGame = api.getUserById(123) // Gets an Optional<User>
-        .map(User::getActivity) // "Converts"/Maps the user to a Optional<Activity>. The value is now Optional<Optional<Activity>>
-        .filter(Optional::isPresent) // Checks if the activity (game) exists
-        .map(Optional::get) // "Converts"/Maps the Optional<Optional<Game>> to Optional<Game>
-        .map(Activity::getName) // "Converts"/Maps the activity object to the name of the activity (a String)
-        .orElse("None"); // If the user does not exist or doesn't play a game, currentGame is "None"
-
+String activityName = api.getCachedUserById(123L) // Optional<User>
+        .flatMap(User::getActivity) // Optional<Activity>
+        .map(Activity::getName) // Optional<String>
+        .orElse("None"); // String
 ```
-:::
+
+Without `flatMap`, the code would look like this:
+```java
+String activityName = api.getCachedUserById(123L) // Optional<User>
+        .map(User::getActivity) // Optional<Optional<Activity>>
+        .filter(Optional::isPresent) // Optional<Optional<Activity>>
+        .map(Optional::get) // Optional<Activity>
+        .map(Activity::getName) // Optional<String>
+        .orElse("None"); // String
+```
+
+## :books: Further Read
+
+This tutorial only focused on the absolute basics.
+For an in-depth introduction to Optionals, you can take a look at
+[Oracle's article about optionals](https://www.oracle.com/technical-resources/articles/java/java8-optional.html).
+
