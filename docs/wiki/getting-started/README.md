@@ -1,3 +1,7 @@
+---
+permalink: /wiki
+---
+
 # Intoduction
 
 Welcome to the Javacord wiki! :wave:
