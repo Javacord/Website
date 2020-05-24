@@ -34,8 +34,28 @@ libraryDependencies ++= Seq("org.javacord" % "javacord" % "3.0.6")
 In addition to Javacord, it is also recommended to install a Log4j-2-compatible logging framework.
 A logging framework can be used to provide a more sophisticated logging experience with being able to configure log format, log targets (console, file, database, Discord direct message, ...), log levels per class, and much more.
 
-For example, Log4j Core in Gradle
+For example, Log4j Core:
+
+### Gradle
+
 ```groovy
 dependencies { runtimeOnly 'org.apache.logging.log4j:log4j-core:2.11.0' }
 ```
-Take a look at the [logger configuration](https://javacord.org/wiki/basic-tutorials/logger-configuration/) wiki article for further information.
+
+### Maven
+
+```xml
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.11.0</version>
+</dependency>
+```
+
+### Sbt
+
+```scala
+libraryDependencies ++= Seq("org.apache.logging.log4j" % "log4j-core" % "2.11.0")
+```
+
+Take a look at the [logger configuration](/wiki/basic-tutorials/logger-config/) wiki article for further information.
