@@ -33,12 +33,17 @@ export default {
 </script>
 
 <template>
-  <div v-if="latestVersion == null">
-    <p>
-      Replace <code>$latest-version</code> with the latest version.<br/>
-      You can see the latest version in the image below (but remove the <code>v</code> prefix!).
-    </p>
-    <img alt="Latest version" src="https://shields.javacord.org/github/release/Javacord/Javacord.svg?label=Latest%20Version&colorB=brightgreen&style=flat-square"/>
+  <div v-if="latestVersion == null" class="custom-block warning">
+    <p class="custom-block-title">IMPORTANT</p> 
+    <div>
+      <p>
+        Replace <code>$latest-version</code> with the latest version.<br/>
+        You can see the latest version in the image below (but remove the <code>v</code> prefix!).
+      </p>
+      <img alt="Latest version" src="https://shields.javacord.org/github/release/Javacord/Javacord.svg?label=Latest%20Version&colorB=brightgreen&style=flat-square"/>
+      <br/>
+      <br/>
+    </div>
   </div>
 </template>
 
