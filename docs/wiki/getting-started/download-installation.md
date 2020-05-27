@@ -34,10 +34,10 @@ export default {
 
 <template>
   <div v-if="latestVersion == null">
-    <span>
+    <p>
       Replace <code>$latest-version</code> with the latest version.<br/>
-      You can see the latest version in the image below (without the <code>v</code>!)<br/><br/>
-    </span>
+      You can see the latest version in the image below (but remove the <code>v</code> prefix!).
+    </p>
     <img alt="Latest version" src="https://shields.javacord.org/github/release/Javacord/Javacord.svg?label=Latest%20Version&colorB=brightgreen&style=flat-square"/>
   </div>
 </template>
