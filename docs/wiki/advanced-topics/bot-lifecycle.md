@@ -31,11 +31,15 @@ api.setReconnectDelay(attempt -> attempt * 2);
  Upon hitting this limit, all active sessions for the bot will be terminated, the bot's token will be reset, and
  you will receive an email notification. This is the reason Javacord increases the reconnect delay with every attempt.
 
-By default, the following formula is used to calculate the reconnect delay:  
+By default, the $default\_delay$ formula below is used to calculate the reconnect delay
 
-![](https://javacord.org/img/tutorials/bot-life-cycle/reconnect-delay.png)  
+$$
+default\_delay(a) = \lfloor a^{1.5} - \frac{a^{1.5}}{\frac{1}{(0.1 \cdot a)} + 1} \rceil
+$$
 
-For shard `0`, the delays will look like this:
+with $a$ being the attempt.
+
+The formula will generate the following recollect delay:
 
 | Attempt | Delay |
 | ------- | ----- |

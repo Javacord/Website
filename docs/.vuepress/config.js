@@ -81,5 +81,11 @@ module.exports = {
         }
       ]
     }	
+  },
+  markdown: {
+    extendMarkdown: md => {
+      // katex for LaTeX Math equation
+      md.use(require('@traptitech/markdown-it-katex'))
+    }
   }
 };
