@@ -46,6 +46,9 @@ You can choose whatever you want
 ![](./img-intellij-gradle/after-finished.png)
 
 #### **12.** Add the Javacord dependency. Your `build.gradle` file should now look like this
+
+<LatestVersionInfo/>
+
 ```groovy
 plugins {
     id 'java'
@@ -61,7 +64,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.javacord:javacord:${latest-version}'
+    implementation 'org.javacord:javacord:$latest-version'
 }
 ```
 

@@ -41,6 +41,8 @@ We recommend to use [Intellij + Gradle](./intellij-gradle.md) unless you already
 
 #### **11.** Now you have to add Javacord as a dependency by editing the pom.xml file. Your file should now look like this:
 
+<LatestVersionInfo/>
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -56,7 +58,7 @@ We recommend to use [Intellij + Gradle](./intellij-gradle.md) unless you already
         <dependency>
             <groupId>org.javacord</groupId>
             <artifactId>javacord</artifactId>
-            <version>${latest-version}</version>
+            <version>$latest-version</version>
             <type>pom</type>
         </dependency>
     </dependencies>
