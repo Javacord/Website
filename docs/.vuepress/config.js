@@ -93,5 +93,8 @@ module.exports = {
       // katex for LaTeX Math equation
       md.use(require('@traptitech/markdown-it-katex'))
     }
-  }
+  },
+  plugins: [
+    require('./../../plugins/bot-api')
+  ]
 };
