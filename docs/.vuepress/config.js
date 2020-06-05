@@ -80,7 +80,13 @@ module.exports = {
           ]
         }
       ]
-    }	
+    },
+    // Repo details for "Edit this page on GitHub" footer
+    docsRepo: 'Javacord/Website',
+    docsDir: 'docs',
+    docsBranch: 'master',
+    editLinks: true,
+    editLinkText: 'Edit this page on GitHub'
   },
   markdown: {
     extendMarkdown: md => {
