@@ -20,19 +20,20 @@
     module.exports = {
         data: function() {
             return {
-                latestVersion: window.latestVersion,
+                latestVersion: process.browser ? window.latestVersion : null,
                 latestVersionBadge: LATEST_VERSION_BADGE
             }
         },
 
         mounted: async function() {
-            // We also fetch the latest version in the enhanceApp.js file
-            if (window.latestVersion === undefined) {
-                const response = await (await fetch(LATEST_VERSION_API_URL)).json();
-                window.latestVersion = response.version;
+            if (process.browser) {
+                if (window.latestVersion === undefined) {
+                    const response = await (await fetch(LATEST_VERSION_API_URL)).json();
+                    window.latestVersion = response.version;
+                }
+                this.latestVersion = window.latestVersion;
+                replaceInDOM(document.body, /\$latest-version/g, this.latestVersion);
             }
-            this.latestVersion = window.latestVersion;
-            replaceInDOM(document.body, /\$latest-version/g, this.latestVersion);
         }
     }
 
