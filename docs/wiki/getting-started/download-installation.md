@@ -1,3 +1,10 @@
+---
+keywords:
+- download and installation
+- maven
+- gradle
+---
+
 # Download / Installation
 
 The recommended way to get Javacord is to use a build manager, like Gradle or Maven.  

@@ -1,3 +1,13 @@
+---
+keywords:
+- log4j
+- log4j2
+- slf4j
+- logback
+- logging
+- logger
+---
+
 # Logger Configuration
 
 Logging is an important tool to keep track of what is going on in your application. Javacord uses the [Log4j 2 API](https://logging.apache.org/log4j/2.x/manual/api.html), which allows you to use your favorite logging framework to log messages in your own code and have all logging messages end up in the same destination. In case you do not add your own logging framework, a fallback logger is used that logs to the console.  

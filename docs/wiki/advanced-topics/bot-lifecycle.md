@@ -1,3 +1,11 @@
+---
+keywords:
+- resume
+- reconnect
+- lifecycle
+- unavailable
+---
+
 # Bot Lifecycle
 
 It's important to know the life-cycle of a discord bot to properly handle disconnects. 

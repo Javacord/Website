@@ -1,3 +1,12 @@
+---
+keywords:
+- creating listeners
+- listener creation
+- ListenerManager
+- removeListener
+- remove listener
+---
+
 # Listeners
 
 ## :man_mechanic: Creating listeners

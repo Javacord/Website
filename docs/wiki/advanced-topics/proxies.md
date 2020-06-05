@@ -1,3 +1,12 @@
+---
+keywords:
+- proxy
+- connection
+- socks
+- socks4
+- socks5
+---
+
 # Proxies
 
 There are basically two kinds of proxies: HTTP proxies and SOCKS proxies. Both may or may not support or require authentication depending on version, capabilities, and configuration. Due to the underlying libraries used, currently, Javacord fully supports HTTP proxies and partially supports SOCKS proxies.

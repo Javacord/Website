@@ -1,3 +1,9 @@
+---
+keywords:
+- sharding
+- large
+---
+
 # Sharding
 
 Discord allows (and forces) you to "split" larger bots into several independent parts. This behavior is called "sharding", and the independent parts are called "shards". You can think of shards as completely independent bots. Every shard is responsible for a disjoint set of servers.

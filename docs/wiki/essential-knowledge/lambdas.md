@@ -1,3 +1,8 @@
+---
+keywords:
+- lambdas
+---
+
 # Lambdas
 
 Lambdas are used to implement [functional interfaces](https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html).

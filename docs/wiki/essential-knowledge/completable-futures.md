@@ -1,3 +1,12 @@
+---
+keywords:
+- CompletableFuture
+- exceptionally
+- ExceptionLogger
+- join
+- thenAcceptAsync
+---
+
 # Completable Futures
 
 ::: warning

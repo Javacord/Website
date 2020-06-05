@@ -8,9 +8,9 @@ module.exports = (options, context) => ({
         const data = context.pages.map(page => ({
             title: page.title,
             headers: page.headers,
-            content: page._content,
-            _strippedContent: page._strippedContent,
+            content: page._strippedContent,
             path: page.path,
+            keywords: (page.frontmatter || {}).keywords || []
         }));
         await fs.writeFile(searchIndexPath, JSON.stringify(data));
     }

@@ -1,3 +1,11 @@
+---
+keywords:
+- null
+- ifPresent
+- isPresent
+- orElse
+---
+
 # Optionals
 
 ::: warning

@@ -1,3 +1,12 @@
+---
+keywords:
+- performance
+- tweaks
+- startup wait
+- message cache
+- tuning
+---
+
 # Performance Tweaks
 
 ## :scissors: Disabling Startup Wait

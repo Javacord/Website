@@ -1,3 +1,18 @@
+---
+keywords:
+- EmbedBuilder
+- inline field
+- setTitle
+- setDescription
+- setAuthor
+- addField
+- addInlineField
+- setColor
+- setFooter
+- setImage
+- setThumbnail
+---
+
 # Embeds
 
 Embeds are attached to messages and have a special design.

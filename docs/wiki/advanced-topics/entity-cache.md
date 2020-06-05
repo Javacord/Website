@@ -1,3 +1,10 @@
+---
+keywords:
+- entity
+- cache
+- caching
+---
+
 # Entity Cache
 
 Javacord keeps an internal cache for entities (e.g. Servers, Channels, Users, ...). It is important to know how the cache behaves to properly use it.

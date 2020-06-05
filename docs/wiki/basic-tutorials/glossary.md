@@ -1,3 +1,18 @@
+---
+keywords:
+- Guild
+- Selfbot
+- Sharding
+- Token
+- Embed
+- Ratelimit
+- Websocket
+- Gateway
+- Rest Request
+- Activity
+- Rich Presence
+---
+
 # Glossary
 
 This is a list with the most common Discord-related terms:

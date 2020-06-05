@@ -1,3 +1,8 @@
+---
+keywords:
+- ratelimits
+---
+
 # Ratelimits
 
 Ratelimits is a Discord restriction which prevents you from performing actions in a very fast rate.

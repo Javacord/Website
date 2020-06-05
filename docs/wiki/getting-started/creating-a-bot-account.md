@@ -1,3 +1,11 @@
+---
+keywords:
+- bot creation
+- get token
+- add bot
+- bot invite link
+---
+
 # Creating a Bot Account
 
 After you added Javacord as a dependency with your favorite build manager, you should now create a bot account on the Discord website.

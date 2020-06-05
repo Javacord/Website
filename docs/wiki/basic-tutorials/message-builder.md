@@ -1,3 +1,10 @@
+---
+keywords:
+- create messages
+- message creation
+- sendMessage
+---
+
 # Using the MessageBuilder
 
 The `MessageBuilder` class is a more powerful alternative to the `TextChannel#sendMessage(...)` method.
