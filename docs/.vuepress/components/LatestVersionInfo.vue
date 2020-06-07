@@ -20,13 +20,13 @@
     module.exports = {
         data: function() {
             return {
-                latestVersion: process.browser ? window.latestVersion : null,
+                latestVersion: typeof window !== 'undefined' ? window.latestVersion : null,
                 latestVersionBadge: LATEST_VERSION_BADGE
             }
         },
 
         mounted: async function() {
-            if (process.browser) {
+            if (typeof window !== 'undefined') {
                 if (window.latestVersion === undefined) {
                     const response = await (await fetch(LATEST_VERSION_API_URL)).json();
                     window.latestVersion = response.version;
