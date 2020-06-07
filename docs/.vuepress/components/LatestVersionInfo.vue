@@ -33,6 +33,12 @@
                 }
                 this.latestVersion = window.latestVersion;
                 replaceInDOM(document.body, /\$latest-version/g, this.latestVersion);
+
+                const major = this.latestVersion.split('\.')[0];
+                const minor = this.latestVersion.split('\.')[1];
+                const trivial = this.latestVersion.split('\.')[2];
+                const latestSnapshotVersion = `${major}.${minor}.${parseInt(trivial) + 1}-SNAPSHOT`;
+                replaceInDOM(document.body, /\$latest-snapshot-version/g, latestSnapshotVersion);
             }
         }
     }

@@ -23,7 +23,7 @@ dependencies { implementation 'org.javacord:javacord:$latest-version' }
 
 ### Maven
 
-```
+```xml
 <dependency>
     <groupId>org.javacord</groupId>
     <artifactId>javacord</artifactId>
@@ -37,6 +37,49 @@ dependencies { implementation 'org.javacord:javacord:$latest-version' }
 ```scala
 libraryDependencies ++= Seq("org.javacord" % "javacord" % "$latest-version")
 ```
+
+::: details Click to view snapshot repositories
+
+Snapshots are automatically deployed from the [development](https://github.com/Javacord/Javacord/tree/development) branch.
+
+### Gradle
+
+```groovy
+repositories { 
+  maven {
+    url "https://oss.sonatype.org/content/repositories/snapshots/"
+  }
+}
+dependencies { 
+  implementation 'org.javacord:javacord:$latest-snapshot-version' 
+}
+```
+
+### Maven
+
+```xml
+<repository>
+    <id>snapshots-repo</id>
+    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+</repository>
+```
+```xml
+<dependency>
+    <groupId>org.javacord</groupId>
+    <artifactId>javacord</artifactId>
+    <version>$latest-snapshot-version</version>
+    <type>pom</type>
+</dependency>
+```
+
+### Sbt
+
+```scala
+resolvers += "snapshots-repo" at "https://oss.sonatype.org/content/repositories/snapshots/"
+libraryDependencies ++= Seq("org.javacord" % "javacord" % "$latest-snapshot-version")
+```
+:::
+
 
 ## :memo: Optional Logger Dependency
 
