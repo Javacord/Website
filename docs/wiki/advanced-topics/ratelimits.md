@@ -18,6 +18,7 @@ Most ratelimits are on a per-channel or a per-server basis.
 | Edit Server Members  | 10 / 10s  | per server  |
 | Edit Member Nickname | 1 / 1s    | per server  |
 | Edit Bot Username    | 2 / 1h    | per account |
+| Update Channels      | 2 / 10m   | per account |
 | All Actions Combined | 50 / 1s   | per account |
 
 ## :muscle: Dealing with Ratelimits
