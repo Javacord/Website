@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://javacord.org/img/javacord3_banner.png
+heroImage: /img/javacord3_banner.png
 heroText: null
 tagline: An easy to use multithreaded library for creating Discord bots in Java.
 actionText: View Wiki →
