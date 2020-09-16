@@ -5,12 +5,12 @@ keywords:
 - voice
 ---
 
+# Playing Audio
+
 ::: warning
 Support for audio was added to Javacord very recently.
 If you encounter any bugs, please [create an issue on GitHub](https://github.com/Javacord/Javacord/issues/new)!
 :::
-
-# Playing Audio
 
 Javacord allows your bot to connect to voice channels and play audio (e.g., music).
 This short tutorial gives you an introduction on how to connect to a voice channel and play your 
