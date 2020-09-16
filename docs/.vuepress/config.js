@@ -63,6 +63,7 @@ module.exports = {
           children: [
             'advanced-topics/bot-lifecycle',
             'advanced-topics/entity-cache',
+            'advanced-topics/playing-audio',
             'advanced-topics/ratelimits',
             'advanced-topics/sharding',
             'advanced-topics/performance-tweaks',
