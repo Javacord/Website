@@ -97,7 +97,7 @@ AudioPlayer player = playerManager.createPlayer();
 
 // Create an audio source and add it to the audio connection's queue
 AudioSource source = new LavaplayerAudioSource(api, player);
-audioConnection.queue(source);
+audioConnection.setAudioSource(source);
 
 // You can now use the AudioPlayer like you would normaly do with Lavaplayer, e.g.,
 playerManager.loadItem("https://www.youtube.com/watch?v=NvS351QKFV4", new AudioLoadResultHandler() {
