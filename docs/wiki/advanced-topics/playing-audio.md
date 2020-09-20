@@ -40,7 +40,7 @@ channel.connect().thenAccept(audioConnection -> {
 ## :ear: Playing music
 
 There are plenty of sources for audio (e.g., YouTube, local files, etc.).
-The current de facto standard library for music bots with Java is the
+The current de facto standard library for extracting audio from these sources with Java is the
 [LavaPlayer](https://github.com/sedmelluq/lavaplayer) library.
 
 To use it with Javacord, you have to add it as a dependency to your project (e.g., with Gradle or Maven) and
