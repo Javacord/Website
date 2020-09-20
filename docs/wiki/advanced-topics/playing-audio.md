@@ -93,6 +93,7 @@ With this audio source, you can now start using Lavaplayer, e.g. to play a YouTu
 ```java
 // Create a player manager
 AudioPlayerManager playerManager = new DefaultAudioPlayerManager();
+playerManager.registerSourceManager(new YoutubeAudioSourceManager());
 AudioPlayer player = playerManager.createPlayer();
 
 // Create an audio source and add it to the audio connection's queue
