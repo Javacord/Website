@@ -48,6 +48,7 @@ module.exports = {
           sidebarDepth: 1,
           children: [
             'basic-tutorials/listeners',
+            'basic-tutorials/gateway-intents',
             'basic-tutorials/embeds',
             'basic-tutorials/emojis-and-reactions',
             'basic-tutorials/message-builder',

@@ -13,6 +13,11 @@ Javacord keeps an internal cache for entities (e.g. Servers, Channels, Users, ..
 
 Nearly every entity known by the bot is guaranteed to be in the cache. There are a few exceptions though:
 
+#### Users
+
+Users are only cached when you have the `GUILD_MEMBERS` intent enabled.
+See [Gateway Intents](/wiki/basic-tutorials/gateway-intents/) for more information.
+
 #### Messages
 
 Not every single message is in the cache, which means you can encounter messages which exist but are not in the cache. This can happen for most message events, e.g. the [`ReactionAddEvent`](https://ci.javacord.org/javadoc/org/javacord/api/event/message/reaction/ReactionAddEvent.html). You can, however, interact with these messages without having them in the cache. Every message event has methods like `event.deleteMessage()`, `event.editMessage("New Content")`. If you need the message (e.g. to get its content), you can request it using `event.requestMessage()`.
