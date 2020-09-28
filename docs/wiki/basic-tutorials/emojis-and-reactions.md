@@ -34,7 +34,7 @@ channel.sendMessage("Hi! :smiley:");
 
 ### How to use them for reactions
 
-Adding unicode reactions is only possible by using the "real" reaction. It doesn't support tags like `:smiley:`
+Adding unicode reactions is only possible by using the "real" reaction. It doesn't support tags like `:smiley:`.
 ```java
 message.addReaction("😃"); // works
 message.addReaction(":smiley:"); // doesn't work

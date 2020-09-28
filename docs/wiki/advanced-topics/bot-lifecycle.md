@@ -27,8 +27,8 @@ This can have various reasons, for example:
 * Discord restarted the gateway server you are currently connected to
 * A plane crashed into Discord's data center
 
-The bot will periodically try ro resume/reconnect to the websocket. It will start with a small frequency and increase it
-with every failed reconnect attempt. You can modify this reconnect delay with the `DiscordApi#setReconnectDelay(...)` method.
+The bot will periodically try to resume/reconnect to the websocket. It will start with a small frequency and increase it
+with every failed reconnect attempt. You can modify the reconnect delay with the `DiscordApi#setReconnectDelay(...)` method.
 The following example code would increase the delay linearly.
 The 1st attempt would be delayed for `2` seconds, the 2nd attempt for `4` seconds, the 3rd attempts for `6` seconds, ...
 ```java
@@ -74,7 +74,7 @@ accordingly.
 
 ### Reconnecting
 
-If your bot reconnects (not resumes!), the whole cache gets wiped and you will not receive any missed events.  
+If your bot reconnects (not resumes!), the whole cache gets wiped, and you will not receive any missed events.  
 
 **What does this mean?**  
 * References to entities (e.g. a `Server`, `User`, `Channel`, ...) will be outdated. This is why you should never store

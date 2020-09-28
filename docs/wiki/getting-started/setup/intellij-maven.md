@@ -17,7 +17,7 @@ We recommend to use [Intellij + Gradle](./intellij-gradle.md) unless you already
 
 #### **3.** Select `Maven`
 
-#### **4.** Make sure to select a SDK which is 1.8 (or greater)
+#### **4.** Make sure to select an SDK which is 1.8 (or greater)
 
 #### *5.** Click `Next`
 
