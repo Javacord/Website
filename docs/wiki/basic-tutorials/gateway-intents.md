@@ -70,8 +70,9 @@ Besides being privileged, they have some special implications for Javacord:
 ### `GUILD_PRESENCES`
 
 This intent is required to get updates about a user's status (i.e., if they are online, what game they are playing, ...).
-Usually, you want to disable this intent, because it has a very large performance impact.
-Especially in larger servers, users are constantly changing their presence and thus your bot will receive **a lot** presence updates. 
+Additionally, without this intent it might take considerably longer to cache all users because of ratelimits 
+(up to 10 minutes for shards with 1000 servers). 
+It is advised against setting `DiscordApiBuilder#setWaitForAllUsersOnStartup(true)` without this intent, unless absolutely necessary.
 
 ### `GUILD_MEMBERS`
 
