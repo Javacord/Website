@@ -13,7 +13,7 @@ If you are already familiar with IntelliJ and Gradle, you can just see the artif
 
 #### **3.** Select `Gradle`
 
-#### **4.** Make sure to select a SDK which is 1.8 (or greater)
+#### **4.** Make sure to select an SDK which is 1.8 (or greater)
 
 #### **5.** Click `Next`
 

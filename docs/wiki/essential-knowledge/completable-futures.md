@@ -10,7 +10,7 @@ keywords:
 # Completable Futures
 
 ::: warning
-This tutorials assumes, that you are familiar with lambda expressions.
+This tutorial assumes that you are familiar with lambda expressions.
 Take a look at the [lambda introduction](/wiki/essential-knowledge/lambdas/) first, if you are not!
 :::
 
@@ -110,7 +110,7 @@ For example, if your bot doesn't have the permissions to create a new channel, i
 
 ### exceptionally(...)
 
-The `exceptionally` method accepts a `Function` as parameter, which consumes possible exceptions and returns an fallback value.
+The `exceptionally` method accepts a `Function` as parameter, which consumes possible exceptions and returns a fallback value.
 
 The following example would create a new text channel in a given `server` and send a message directly afterwards.
 If something fails (e.g., if the bot isn't allowed to create a text channel in the server), it will log an exception.
@@ -185,7 +185,7 @@ new ServerTextChannelBuilder(server) // ServerTextChannelBuilder
 
 ## :books: Further Read
 
-This tutorial only focused on the absolute basics.
+This tutorial only focuses on the absolute basics.
 For a more detailed introduction to CompletableFutures, you can take a look at
 [this tutorial](https://www.callicoder.com/java-8-completablefuture-tutorial/).
 

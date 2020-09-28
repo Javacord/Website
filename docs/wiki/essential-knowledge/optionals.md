@@ -9,7 +9,7 @@ keywords:
 # Optionals
 
 ::: warning
-This tutorials assumes, that you are familiar with lambda expressions.
+This tutorial assumes that you are familiar with lambda expressions.
 Take a look at the [lambda introduction](/wiki/essential-knowledge/lambdas/) first, if you are not!
 :::
 
@@ -177,7 +177,7 @@ String activityName = api.getCachedUserById(123L) // Optional<User>
 
 ## :books: Further Read
 
-This tutorial only focused on the absolute basics.
+This tutorial only focuses on the absolute basics.
 For an in-depth introduction to Optionals, you can take a look at
 [Oracle's article about optionals](https://www.oracle.com/technical-resources/articles/java/java8-optional.html).
 

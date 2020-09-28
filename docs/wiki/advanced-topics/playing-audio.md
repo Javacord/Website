@@ -100,7 +100,7 @@ AudioPlayer player = playerManager.createPlayer();
 AudioSource source = new LavaplayerAudioSource(api, player);
 audioConnection.setAudioSource(source);
 
-// You can now use the AudioPlayer like you would normaly do with Lavaplayer, e.g.,
+// You can now use the AudioPlayer like you would normally do with Lavaplayer, e.g.,
 playerManager.loadItem("https://www.youtube.com/watch?v=NvS351QKFV4", new AudioLoadResultHandler() {
     @Override
     public void trackLoaded(AudioTrack track) {

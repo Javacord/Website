@@ -60,7 +60,7 @@ One example would be the Optional class, which is explained [here](/wiki/essenti
 
 ## :books: Further Read
 
-This tutorial only focused on the absolute basics.
+This tutorial only focuses on the absolute basics.
 For an in-depth introduction to lambda expressions, you can take a look at
 [Oracle's article about lambda expressions](https://www.oracle.com/technical-resources/articles/java/architect-lambdas-part1.html).
 

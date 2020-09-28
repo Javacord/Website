@@ -22,7 +22,7 @@ See [Gateway Intents](/wiki/basic-tutorials/gateway-intents/) for more informati
 
 Not every single message is in the cache, which means you can encounter messages which exist but are not in the cache. This can happen for most message events, e.g. the [`ReactionAddEvent`](https://ci.javacord.org/javadoc/org/javacord/api/event/message/reaction/ReactionAddEvent.html). You can, however, interact with these messages without having them in the cache. Every message event has methods like `event.deleteMessage()`, `event.editMessage("New Content")`. If you need the message (e.g. to get its content), you can request it using `event.requestMessage()`.
 
-Additionally you can use the static methods in the [`Message`](https://ci.javacord.org/javadoc/org/javacord/api/entity/message/Message.html) class which only require the channel and message id, e.g. `Message.edit(api, channelId, messageId, "New content");`. This is very useful if you want to store them in a database.
+Additionally, you can use the static methods in the [`Message`](https://ci.javacord.org/javadoc/org/javacord/api/entity/message/Message.html) class which only require the channel and message id, e.g. `Message.edit(api, channelId, messageId, "New content");`. This is very useful if you want to store them in a database.
 
 #### Webhooks and Invites
 
@@ -47,7 +47,7 @@ System.out.println(message.getContent()); // Most likely prints "new content" no
 
 ## :watch: How long are cached entities valid?
 
-Even though entities are usually kept in the cache for a very long time, you should not keep references to theses objects for a longer period of time, but store the id / use event methods:
+Even though entities are usually kept in the cache for a very long time, you should not keep references to these objects for a longer period of time, but store the id / use event methods:
 
 ```java
 // Bad

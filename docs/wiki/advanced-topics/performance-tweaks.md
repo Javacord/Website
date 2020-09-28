@@ -11,7 +11,7 @@ keywords:
 
 ## :scissors: Disabling Startup Wait
 
-By default, Javacord waits for all servers and members being loaded on startup. You can disable this behavior in the `DiscordApiBuilder` before logging in:
+By default, Javacord waits for all servers and members to be loaded on startup. You can disable this behavior in the `DiscordApiBuilder` before logging in:
 ```java
 new DiscordApiBuilder()
     .setToken("abc")
@@ -25,7 +25,7 @@ Depending on the size of your bot, this can significantly speed up the login pro
 
 ## :gear: Fine Tuning the Message Cache
 
-In order to reduce memory usage, you can completely disable the message cache or reduce the number of cached messages. By default, Javacord caches up to 50 messages per channel and removes messages from cache which are older than 12 hours. You can lower this limit by using `DiscordApi#setMessageCacheSize(Capacity, StorageTimeInSeconds)`
+In order to reduce memory usage, you can completely disable the message cache or reduce the number of cached messages. By default, Javacord caches up to 50 messages per channel and removes messages from the cache which are older than 12 hours. You can lower this limit by using `DiscordApi#setMessageCacheSize(Capacity, StorageTimeInSeconds)`.
 ```java
 // Cache a maximum of 10 messages per channel for and remove messages older than 1 hour
 api.setMessageCacheSize(10, 60*60);

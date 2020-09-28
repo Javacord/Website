@@ -1,6 +1,6 @@
 # Writing your first bot
 
-After you have sucessfully added Javacord as a dependency, created a bot user, and got its token, you are now ready to create your first simple bot! :tada:
+After you have successfully added Javacord as a dependency, created a bot user, and got its token, you are now ready to create your first simple bot! :tada:
 
 ## :key: Log the bot in
 
@@ -32,7 +32,7 @@ api.addMessageCreateListener(event -> {
 
 ## :woman_mechanic: Putting it all together
 
-A good place for your code is the `main(...)` method that every exectuable Java program must have.
+A good place for your code is the `main(...)` method that every executable Java program must have.
 Your complete class may look like this:
 
 ```java

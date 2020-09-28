@@ -43,13 +43,13 @@ This token is used to login your bot. Keep it secret!
 ## :heavy_plus_sign: How to add a bot to your server
 
 Bots cannot join a server on their own like normal Discord users can.
-Instead the owner of a sever has to invite the bot using a so called `Invite Link`.
+Instead, the owner of a server has to invite the bot using a so called `Invite Link`.
 There are multiple ways to create the invite link:
 
 ### Use Javacord to create the invite link
 
-The easiest way to obtain an invite link for you bot is by letting Javacord do it for you.
-Simply execute the following code and it will print the invite link to your console:
+The easiest way to obtain an invite link for your bot is by letting Javacord do it for you.
+Simply execute the following code, and it will print the invite link to your console:
 
 ```java
 DiscordApi api = new DiscordApiBuilder().setToken("your token").login().join();

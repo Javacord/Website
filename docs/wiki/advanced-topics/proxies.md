@@ -17,7 +17,7 @@ Javacord uses HTTPS connections to communicate with the Discord REST API and a W
 
 ### ... using System Properties
 
-If you did not explicitly set a proxy in the `DiscordApiBuilder` and did not set a system default `ProxySelector`, the default proxy selector of the JRE is used. This proxy selector honors, amongst others, the relevant standard system properties `https.proxyHost`, `https.proxyPort`, `socksProxyHost`, `socksProxyPort`, and `socksProxyVersion`. Use the former two to configure an HTTP proxy or the latter three to configure a SOCKS proxy although you will not need `socksProxyVersion`, as SOCKS4 is currently not supported.
+If you did not explicitly set a proxy in the `DiscordApiBuilder` and did not set a system default `ProxySelector`, the default proxy selector of the JRE is used. This proxy selector honors, amongst others, the relevant standard system properties `https.proxyHost`, `https.proxyPort`, `socksProxyHost`, `socksProxyPort`, and `socksProxyVersion`. Use the former two to configure an HTTP proxy, or the latter three to configure a SOCKS proxy, although you will not need `socksProxyVersion`, as SOCKS4 is currently not supported.
 
 ### ... using a System Default Proxy Selector
 
@@ -59,7 +59,7 @@ HTTP proxies are fully supported.
 
 SOCKS 4 is currently not supported.
 
-The WebSocket library we use does not support SOCKS proxies at all and the HTTP library we use has a bug that prevents SOCKS 4 to be used. Additionally, you would need to use at least Java 9 or a separate socket factory supporting SOCKS 4, as the JRE implementation is not working in Java 8 and got fixed only in Java 9+.
+The WebSocket library we use does not support SOCKS proxies at all, and the HTTP library we use has a bug that prevents SOCKS 4 to be used. Additionally, you would need to use at least Java 9 or a separate socket factory supporting SOCKS 4, as the JRE implementation is not working in Java 8 and got fixed only in Java 9+.
 
 ### SOCKS 4a
 
