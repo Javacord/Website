@@ -78,7 +78,7 @@ If your bot reconnects (not resumes!), the whole cache gets wiped, and you will 
 
 **What does this mean?**  
 * References to entities (e.g. a `Server`, `User`, `Channel`, ...) will be outdated. This is why you should never store
-  entities, but the id instead. See [Entity Cache](http://localhost:4000/wiki/advanced-tutorials/entity-cache/#how-long-are-cached-entities-valid).
+  entities, but the id instead. See [Entity Cache](/wiki/advanced-topics/entity-cache.md#how-long-are-cached-entities-valid).
 * You will miss events. There's no way to receive the missed events.
 * Listeners attached to entities will **not** be affected, because they are bound to the entity's id, not the object itself.
 
