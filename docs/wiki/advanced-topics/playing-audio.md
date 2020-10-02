@@ -104,13 +104,13 @@ audioConnection.setAudioSource(source);
 playerManager.loadItem("https://www.youtube.com/watch?v=NvS351QKFV4", new AudioLoadResultHandler() {
     @Override
     public void trackLoaded(AudioTrack track) {
-        player.play(track);
+        player.playTrack(track);
     }
 
     @Override
     public void playlistLoaded(AudioPlaylist playlist) {
         for (AudioTrack track : playlist.getTracks()) {
-            player.play(track);
+            player.playTrack(track);
         }
     }
 
