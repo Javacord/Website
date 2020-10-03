@@ -18,6 +18,7 @@ onMounted(async () => {
       latestVersion = shieldsResponse.value.substring(1);
     }
     replaceInDOM(document.body, /\$latest-version/g, latestVersion);
+    replaceInDOM(document.body, /{{latestVersion}}/g, latestVersion);
 
     const latestSnapshotVersionResponse = await (await fetch("https://raw.githubusercontent.com/Javacord/Javacord/master/gradle.properties")).text();
     const latestSnapshotVersion = latestSnapshotVersionResponse.match("=.*-SNAPSHOT")[0].replace("=", "").trim();
