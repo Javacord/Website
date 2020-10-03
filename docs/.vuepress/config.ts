@@ -69,6 +69,7 @@ export default {
                         '/wiki/basic-tutorials/message-builder',
                         '/wiki/basic-tutorials/creating-entities',
                         '/wiki/basic-tutorials/logger-config',
+                        '/wiki/basic-tutorials/running',
                         '/wiki/basic-tutorials/glossary',
                     ]
                 },
