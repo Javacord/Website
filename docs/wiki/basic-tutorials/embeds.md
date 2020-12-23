@@ -39,6 +39,34 @@ EmbedBuilder embed = new EmbedBuilder()
 // Send the embed
 channel.sendMessage(embed);
 ```
+All this is a bit confusing :thinking: so let's break it down!
+
+## :bone: Basics
+To start using the embed builder, you need to instantiate it like any other class and then you can start acessing it's methods. We'll go through the basic ones here:
+
+* `EmbedBuilder.setTitle("")`- Most of the time you will want a title for your embed, won't you :question: This sets the title of the embed, the top-most words in the embed.
+
+* `EmbedBuilder.setDescription("")`- This sets the description, this is like the subtitle of your embed if you will. It is displayed right after the title.
+
+* `EmbedBuilder.addFeild("", "", false)`- So if you want more subtitles than your description, This is the way to do that! thats cool and all, but what are the 3 parameters? The first one is the subtitle of the feild and the second one is the content of that subtitle, and the third one is a boolean that will change the position of the subtitle, suppose there are 2 of these "feilds" and you want them to go side by side then just set both (or any one) to have the inline value (the last parameter) to true and it will display it on the same line! Alternatively you can also use the dedicated method, `EmbedBuilder.addInlineFeild("");` to do the work of the last parameter in the `EmbedBuilder.addFeild("")`
+
+* `EmbedBuilder.setFooter("", "")`- This sets the bottom-most text in the embed, There is also an optional last parameter, which is a url for a image that will be displayed beside the text at the bottom
+
+* `EmbedBuilder.setColor(Color)`- This setts the color on the side of the embed... The way you use it is create a new color class, like so: `Color embedColor = new Color(r, g, b)` and put the RGB (ints) values in the constructor, and then use that variable in the `setColor()`. One neat perk, if you use intellij idea is that you have a integrated color picker when you use the constructor to set the color. Alternatively you can also use the predefined colors like a `Color.RED` and many others. 
+
+## :gear: Advanced topics
+These are some of the more rarely used but still useful methods:
+
+* `EmbedBuilder.setImage("")`- Adds an Image to the bottom of the embed, This can edither be a link to a image on the web or one stored on your computer.
+
+* `EmbedBuilder.setThumbnail("")`- Adds an image to the embed but this time at the right side of it! aThis can either be a link or a local file.
+
+* `EmbedBuilder.setAuthor("", "")`- This adds text to the top of the embed (above the title), you can make it dynamic by using `event.getMessageAuthor().getDisplayName();`, It has an optional second parameter which can be an image much like the footer.
+
+* `EmbedBuilder.setTimestampToNow()`- Sets the Timestamp of the embed to be the current time.
+
+* `EmbedBuilder.getTimestamp()`- gets the timesStamp of the embed, useful for when you have to add a footer and set it to the time the message was sent.
+
 
 ## :camera: Supported Image Sources
 
