@@ -156,7 +156,7 @@ String activityName =  api.getYourself() // User
 ### flatMap(...)
 
 The `flatMap` method if very similar to the `map` methods.
-It is a used to map values that itself are Optionals to prevent Optional nesting (a "box in a box").
+It is used to map values that itself are Optionals to prevent Optional nesting (a "box in a box").
 
 ```java
 String activityName = api.getCachedUserById(123L) // Optional<User>
