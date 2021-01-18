@@ -32,3 +32,34 @@ new MessageBuilder()
 will be displayed like this:
 
  ![](https://i.imgur.com/AP1cjDf.png)
+ 
+## :round_pushpin: Allowed Mentions
+
+The allowed mentions object lets you control what should be mentioned (pinged) in a message if it contains mentions.
+
+The following code will ping:
+- The user0
+- All mentioned roles in the message
+
+And will not ping:
+- @everyone and @here
+- The user1
+
+```java
+AllowedMentions allowedMentions = new AllowedMentionsBuilder()
+                .addUser(user0.getId())
+                .setMentionRoles(true)
+                .setMentionEveryoneAndHere(false)
+                .build();
+
+        new MessageBuilder()
+                .setAllowedMentions(allowedMentions)
+                .append(user0.getMentionTag())
+                .append(user1.getMentionTag())
+                .append(role.getMentionTag())
+                .append(role2.getMentionTag())
+                .append("@everyone")
+                .send(channel);
+```
+
+If you add a user to the mentions object and set `setMentionUsers(true)` it will ping every mentioned user. The same applies for `setMentionRoles(true)`
