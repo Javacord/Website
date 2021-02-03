@@ -72,8 +72,13 @@ In addition to the limits above, the sum of all characters in an embed structure
 > ![](https://i.imgur.com/SyE0e88.png)
 
 ### What's the difference between an inline field and a normal one?
+
 Normal fields always start in a new line, whereas several inline fields can be in the same line.
 
 ### Can I change the placement of inline fields?
 
 No, Discord does not allow different embed layouts.
+
+### How do I add links with custom text?
+
+Use the following syntax ``[custom text](link url)`` for example ``[Javacord](https://javacord.org/)``
