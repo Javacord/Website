@@ -9,7 +9,7 @@ keywords:
 
 The `MessageBuilder` class is a more powerful alternative to the `TextChannel#sendMessage(...)` method.
 
-I can be used to construct more complex messages and supports some additional features that are not possible
+It can be used to construct more complex messages and supports some additional features that are not possible
 with a simple `TextChannel#sendMessage(...)` call.
 
 ## :female_detective: Example
