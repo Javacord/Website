@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Javacord',
   description: 'The Javacord website',
+  theme: 'yuu',
   head: [
     ['link', { rel: 'icon', href: '/favicon-96x96.png' }]
   ],
