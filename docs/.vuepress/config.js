@@ -21,13 +21,12 @@ module.exports = {
       },
     ],
     yuu: {
-			defaultDarkTheme: true,
-      defaultColorTheme: 'purple',
+      defaultDarkTheme: false,
       disableThemeIgnore: true,
       labels: {
-				darkTheme: 'Enable Dark Theme', // Default is "Enable Dark Theme?"
-			},
-		},
+        darkTheme: 'Enable Dark Theme', // Default is "Enable Dark Theme?"
+      },
+    },
     sidebar: {
       '/wiki/': [
         {
