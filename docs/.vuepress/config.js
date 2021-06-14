@@ -61,6 +61,7 @@ module.exports = {
             'basic-tutorials/emojis-and-reactions',
             'basic-tutorials/message-builder',
             'basic-tutorials/creating-entities',
+            'basic-tutorials/running',
             'basic-tutorials/logger-config',
             'basic-tutorials/glossary',
           ]
