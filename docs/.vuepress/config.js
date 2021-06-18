@@ -55,6 +55,15 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 1,
           children: [
+              {
+                  title: 'Interactions',
+                  collapsable: true,
+                  sidebarDepth: 1,
+                  children: [
+                      'basic-tutorials/interactions/commands',
+                      'basic-tutorials/interactions/components'
+                  ]
+              },
             'basic-tutorials/listeners',
             'basic-tutorials/gateway-intents',
             'basic-tutorials/embeds',
