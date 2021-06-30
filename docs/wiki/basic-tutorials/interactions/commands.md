@@ -162,7 +162,8 @@ api.bulkOverwriteGlobalSlashCommands(Arrays.asList(
 ## :speech_balloon: Responding to commands
 The following example responds to the previous created command to update the permissions of a channel
 ``` java
-api.addInteractionCreateListener(event -> event.getSlashCommandInteraction().ifPresent(slashCommandInteraction -> {
+api.addSlashCommandCreateListener(event -> {
+    SlashCommandInteraction slashCommandInteraction = event.getSlashCommandInteraction();
     ServerChannel channel = slashCommandInteraction.getFirstOptionChannelValue().orElse(null);
     User user = slashCommandInteraction.getSecondOptionUserValue().orElse(null);
     Integer permissionNumber = slashCommandInteraction.getThirdOptionIntValue().orElse(null);
@@ -170,9 +171,9 @@ api.addInteractionCreateListener(event -> event.getSlashCommandInteraction().ifP
     // Update channel permissions...
 
     slashCommandInteraction.createImmediateResponder()
-        .setContent("The channels permissions have been updated")
-        .respond();
-}));
+            .setContent("The channels permissions have been updated")
+            .respond();
+});
 ```
 
 ::: tip INFO
@@ -184,13 +185,14 @@ If you respond later you can send a followup message, described below.
 ### Sending followup messages
 Followup messages can be sent within 15 minutes after the command has been invoked. You can send as many followup messages as you want.
 ``` java
-api.addInteractionCreateListener(event -> event.getSlashCommandInteraction().ifPresent(slashCommandInteraction -> {
+api.addSlashCommandCreateListener(event -> {
+    SlashCommandInteraction slashCommandInteraction = event.getSlashCommandInteraction();
     slashCommandInteraction.respondLater();
     // time < 15 minutes
     slashCommandInteraction.createFollowupMessageBuilder()
-        .setContent("Thank you for your patience, it took a while but the answer to the universe is 42")
-        .send();
-}));
+            .setContent("Thank you for your patience, it took a while but the answer to the universe is 42")
+            .send();
+});
 ```
 
 ## :policeman: Permissions
