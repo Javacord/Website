@@ -50,7 +50,7 @@ If you provide a non-url image source (e.g. the `puppy.jpg` file used in `setIma
 | Type         | Limit           |
 | ------------ | --------------- |
 | Title        | 256 characters  |
-| Description  | 2048 characters |
+| Description  | 4096 characters |
 | Field Amount | Up to 25 fields |
 | Field Name   | 256 characters  |
 | Field Value  | 1024 characters |

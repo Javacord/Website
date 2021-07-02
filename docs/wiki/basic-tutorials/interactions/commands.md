@@ -221,7 +221,7 @@ long COMMAND_ID = ...;
 new SlashCommandPermissionsUpdater(server)
     .setPermissions(Arrays.asList(
         SlashCommandPermissions.create(USER_ID, SlashCommandPermissionType.USER, false),
-        SlashCommandPermissions.create(ROLE_ID, SlashCommandPermissionType.USER, false)))
+        SlashCommandPermissions.create(ROLE_ID, SlashCommandPermissionType.ROLE, false)))
 .update(COMMAND_ID)
 .join();
 ```
@@ -237,7 +237,7 @@ long COMMAND_ID = ...;
 ServerSlashCommandPermissionsBuilder builder1 = new ServerSlashCommandPermissionsBuilder(COMMAND_ID,
         SlashCommandPermissions.create(USER_ID, SlashCommandPermissionType.USER, false));
 ServerSlashCommandPermissionsBuilder builder2 = new ServerSlashCommandPermissionsBuilder(COMMAND_ID,
-        SlashCommandPermissions.create(ROLE_ID, SlashCommandPermissionType.USER, false));
+        SlashCommandPermissions.create(ROLE_ID, SlashCommandPermissionType.ROLE, false));
 
 api.batchUpdateSlashCommandPermissions(server, Arrays.asList(builder1, builder2)).join();
 ```
