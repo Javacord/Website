@@ -187,11 +187,14 @@ Followup messages can be sent within 15 minutes after the command has been invok
 ``` java
 api.addSlashCommandCreateListener(event -> {
     SlashCommandInteraction slashCommandInteraction = event.getSlashCommandInteraction();
-    slashCommandInteraction.respondLater();
-    // time < 15 minutes
-    slashCommandInteraction.createFollowupMessageBuilder()
-            .setContent("Thank you for your patience, it took a while but the answer to the universe is 42")
-            .send();
+    slashCommandInteraction.respondLater().thenAccept(interactionOriginalResponseUpdater -> {
+        interactionOriginalResponseUpdater.setContent("You will receive the answer in a few minutes!").update();
+
+        // time < 15 minutes
+        slashCommandInteraction.createFollowupMessageBuilder()
+                .setContent("Thank you for your patience, it took a while but the answer to the universe is 42")
+                .send();
+    });
 });
 ```
 
