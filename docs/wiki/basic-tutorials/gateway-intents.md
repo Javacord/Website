@@ -13,23 +13,23 @@ Disabling intents that are not required for your bot can significantly increase 
 
 Below you can find a table with all intents supported by Discord.
 
-| Intent                     | Safe to Disable    | Not Privileged     |
+| Intent                     | Safe to Disable    | Privileged         |
 |----------------------------|--------------------|--------------------|
-| `GUILDS`                   | :x:                | :heavy_check_mark: |
-| `GUILD_MEMBERS`            | :heavy_check_mark: | :x:                |
-| `GUILD_BANS`               | :warning:\*        | :heavy_check_mark: |
-| `GUILD_EMOJIS`             | :warning:\*        | :heavy_check_mark: |
-| `GUILD_INTEGRATIONS`       | :heavy_check_mark: | :heavy_check_mark: |
-| `GUILD_WEBHOOKS`           | :heavy_check_mark: | :heavy_check_mark: |
-| `GUILD_INVITES`            | :heavy_check_mark: | :heavy_check_mark: |
-| `GUILD_VOICE_STATES`       | :warning:\*        | :heavy_check_mark: |
-| `GUILD_PRESENCES`          | :heavy_check_mark: | :x:                |
-| `GUILD_MESSAGES`           | :heavy_check_mark: | :heavy_check_mark: |
-| `GUILD_MESSAGE_REACTIONS`  | :heavy_check_mark: | :heavy_check_mark: |
-| `GUILD_MESSAGE_TYPING`     | :heavy_check_mark: | :heavy_check_mark: |
-| `DIRECT_MESSAGES`          | :heavy_check_mark: | :heavy_check_mark: |
-| `DIRECT_MESSAGE_REACTIONS` | :heavy_check_mark: | :heavy_check_mark: |
-| `DIRECT_MESSAGE_TYPING`    | :heavy_check_mark: | :heavy_check_mark: |
+| `GUILDS`                   | :x:                | :x:                |
+| `GUILD_MEMBERS`            | :heavy_check_mark: | :heavy_check_mark: |
+| `GUILD_BANS`               | :warning:\*        | :x:                |
+| `GUILD_EMOJIS`             | :warning:\*        | :x:                |
+| `GUILD_INTEGRATIONS`       | :heavy_check_mark: | :x:                |
+| `GUILD_WEBHOOKS`           | :heavy_check_mark: | :x:                |
+| `GUILD_INVITES`            | :heavy_check_mark: | :x:                |
+| `GUILD_VOICE_STATES`       | :warning:\*        | :x:                |
+| `GUILD_PRESENCES`          | :heavy_check_mark: | :heavy_check_mark: |
+| `GUILD_MESSAGES`           | :heavy_check_mark: | :x:                |
+| `GUILD_MESSAGE_REACTIONS`  | :heavy_check_mark: | :x:                |
+| `GUILD_MESSAGE_TYPING`     | :heavy_check_mark: | :x:                |
+| `DIRECT_MESSAGES`          | :heavy_check_mark: | :x:                |
+| `DIRECT_MESSAGE_REACTIONS` | :heavy_check_mark: | :x:                |
+| `DIRECT_MESSAGE_TYPING`    | :heavy_check_mark: | :x:                |
 
 \* Will most likely work, but needs further testing
 

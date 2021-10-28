@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Javacord',
   description: 'The Javacord website',
+  theme: 'yuu',
   head: [
     ['link', { rel: 'icon', href: '/favicon-96x96.png' }]
   ],
@@ -19,6 +20,13 @@ module.exports = {
         ]
       },
     ],
+    yuu: {
+      defaultDarkTheme: false,
+      disableThemeIgnore: true,
+      labels: {
+        darkTheme: 'Enable Dark Theme', // Default is "Enable Dark Theme?"
+      },
+    },
     sidebar: {
       '/wiki/': [
         {
@@ -47,6 +55,15 @@ module.exports = {
           collapsable: false,
           sidebarDepth: 1,
           children: [
+              {
+                  title: 'Interactions',
+                  collapsable: true,
+                  sidebarDepth: 1,
+                  children: [
+                      'basic-tutorials/interactions/commands',
+                      'basic-tutorials/interactions/components'
+                  ]
+              },
             'basic-tutorials/listeners',
             'basic-tutorials/gateway-intents',
             'basic-tutorials/embeds',

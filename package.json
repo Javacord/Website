@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@traptitech/markdown-it-katex": "^3.2.4",
-    "katex": "^0.11.1"
+    "katex": "^0.11.1",
+    "vuepress-theme-yuu": "^3.0.1"
   }
 }

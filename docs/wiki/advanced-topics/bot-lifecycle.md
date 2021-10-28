@@ -47,7 +47,7 @@ $$
 
 with $a$ being the attempt.
 
-The formula will generate the following recollect delay:
+The formula will generate the following reconnect delay:
 
 | Attempt | Delay |
 | ------- | ----- |
