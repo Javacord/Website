@@ -4,6 +4,7 @@ keywords:
 - component
 - button
 - actionrow
+- selectmenus
 ---
 # Message Components
 ## :grey_question: What are components?
@@ -28,6 +29,24 @@ new MessageBuilder()
 You simply add a High Level component like an ActionRow which is a container for displaying your components.
 In turn the ActionRow consist of the components you can interact with like Buttons.
 
+This works for Select Menus as well:
+
+``` java
+TextChannel channel = ...;
+
+new MessageBuilder()
+    .setContent("Select an option of this list!")
+    .addComponents(
+        ActionRow.of(SelectMenu.create("options", "Click here to show the options", 1, 1,
+            Arrays.asList(SelectMenuOption.create("Option One", "You selected Option One!", "Click here to select Option One"),
+                SelectMenuOption.create("Option Two", "You selected Option Two!", "Click here to select Option Two"),
+                SelectMenuOption.create("Option Three", "You selected Option Three!", "Click here to select Option Three")))))
+    .send(channel);
+```
+![](https://i.imgur.com/bhcGjCN.png)
+
+![](https://i.imgur.com/ZlviGPe.png)
+
 ## :speech_balloon: Responding to component interactions
 The following code snipped shows how you can respond to the previously created example:
 ``` java
@@ -48,6 +67,11 @@ api.addMessageComponentCreateListener(event -> {
             messageComponentInteraction.respondLater().thenAccept(interactionOriginalResponseUpdater -> {
                 //Code to respond after 5 minutes
             });
+            break;
+        case "options":
+            messageComponentInteraction.createImmediateResponder()
+					.setContent("You selected an option in a select menu!")
+					.respond();
             break;
     }
 });
