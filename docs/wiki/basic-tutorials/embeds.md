@@ -77,3 +77,7 @@ Normal fields always start in a new line, whereas several inline fields can be i
 ### Can I change the placement of inline fields?
 
 No, Discord does not allow different embed layouts.
+
+### How can I format text in an embed?
+
+Discord allows for a subset of markdown to be used. See [their docs](https://support.discord.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-) for the specifics.
