@@ -164,9 +164,11 @@ The following example responds to the previous created command to update the per
 ``` java
 api.addSlashCommandCreateListener(event -> {
     SlashCommandInteraction slashCommandInteraction = event.getSlashCommandInteraction();
-    ServerChannel channel = slashCommandInteraction.getFirstOptionChannelValue().orElse(null);
-    User user = slashCommandInteraction.getSecondOptionUserValue().orElse(null);
-    Integer permissionNumber = slashCommandInteraction.getThirdOptionIntValue().orElse(null);
+    SlashCommandInteractionOption editOptions = slashCommandInteraction.getOptions().get(0);
+    SlashCommandInteractionOption allowOptions = editOptions.getOptions().get(0);
+    ServerChannel channel = allowOptions.getFirstOptionChannelValue().orElse(null);
+    User user = allowOptions.getSecondOptionUserValue().orElse(null);
+    Integer permissionNumber = allowOptions.getThirdOptionIntValue().orElse(null);
 
     // Update channel permissions...
 
