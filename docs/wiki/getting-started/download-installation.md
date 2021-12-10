@@ -91,7 +91,7 @@ For example, Log4j Core:
 ### Gradle
 
 ```groovy
-dependencies { runtimeOnly 'org.apache.logging.log4j:log4j-core:2.11.0' }
+dependencies { runtimeOnly 'org.apache.logging.log4j:log4j-core:2.15.0' }
 ```
 
 ### Maven
@@ -100,14 +100,14 @@ dependencies { runtimeOnly 'org.apache.logging.log4j:log4j-core:2.11.0' }
 <dependency>
     <groupId>org.apache.logging.log4j</groupId>
     <artifactId>log4j-core</artifactId>
-    <version>2.11.0</version>
+    <version>2.15.0</version>
 </dependency>
 ```
 
 ### Sbt
 
 ```scala
-libraryDependencies ++= Seq("org.apache.logging.log4j" % "log4j-core" % "2.11.0")
+libraryDependencies ++= Seq("org.apache.logging.log4j" % "log4j-core" % "2.15.0")
 ```
 
 Take a look at the [logger configuration](/wiki/basic-tutorials/logger-config/) wiki article for further information.
