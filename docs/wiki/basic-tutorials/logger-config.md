@@ -43,14 +43,14 @@ This is how a log line from the fallback logger will look like:
 Adding a logging framework of your choice is very straightforward. You can just add it as a dependency, and it will be detected by Log4j automatically. The following example adds Log4j 2 using Gradle:
 
 ```groovy
-dependencies { runtimeOnly 'org.apache.logging.log4j:log4j-core:2.15.0' }
+dependencies { runtimeOnly 'org.apache.logging.log4j:log4j-core:2.17.0' }
 ```
 
 You can also use an SLF4J compatible logging framework using `log4j-to-slf4j`. The following example adds Logback Classic using Gradle:
 
 ```groovy
 dependencies {
-    runtimeOnly 'org.apache.logging.log4j:log4j-to-slf4j:2.15.0'
+    runtimeOnly 'org.apache.logging.log4j:log4j-to-slf4j:2.17.0'
     runtimeOnly 'ch.qos.logback:logback-classic:1.2.3'
 }
 ```
