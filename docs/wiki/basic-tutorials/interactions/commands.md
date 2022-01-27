@@ -221,10 +221,10 @@ long USER_ID = ...;
 long ROLE_ID = ...;
 long COMMAND_ID = ...;
 
-new SlashCommandPermissionsUpdater(server)
+new ApplicationCommandPermissionsUpdater(server)
     .setPermissions(Arrays.asList(
-        SlashCommandPermissions.create(USER_ID, SlashCommandPermissionType.USER, false),
-        SlashCommandPermissions.create(ROLE_ID, SlashCommandPermissionType.ROLE, false)))
+        ApplicationCommandPermissions.create(USER_ID, ApplicationCommandPermissionType.USER, false),
+        ApplicationCommandPermissions.create(ROLE_ID, ApplicationCommandPermissionType.ROLE, false)))
 .update(COMMAND_ID)
 .join();
 ```
