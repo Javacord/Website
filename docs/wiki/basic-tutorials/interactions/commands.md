@@ -36,12 +36,12 @@ SlashCommand command =
                     Arrays.asList(
                         SlashCommandOption.createWithOptions(SlashCommandOptionType.SUB_COMMAND, "allow", "Allows a permission to a user for a channel",
                             Arrays.asList(
-                                SlashCommandOption.create(SlashCommandOptionType.CHANNEL, "CHANNEL", "The channel to modify", true),
-                                SlashCommandOption.create(SlashCommandOptionType.USER, "USER", "The user which permissions should be changed", true),
-                                SlashCommandOption.createWithChoices(SlashCommandOptionType.DECIMAL, "PERMISSION", "The permission to allow", true,
+                                SlashCommandOption.create(SlashCommandOptionType.CHANNEL, "channel", "The channel to modify", true),
+                                SlashCommandOption.create(SlashCommandOptionType.USER, "user", "The user which permissions should be changed", true),
+                                SlashCommandOption.createWithChoices(SlashCommandOptionType.DECIMAL, "permission", "The permission to allow", true,
                                     Arrays.asList(
-                                        SlashCommandOptionChoice.create("MANAGE", 0),
-                                        SlashCommandOptionChoice.create("SHOW", 1)))
+                                        SlashCommandOptionChoice.create("manage", 0),
+                                        SlashCommandOptionChoice.create("show", 1)))
         ))))))
         .createGlobal(api)
         .join();
