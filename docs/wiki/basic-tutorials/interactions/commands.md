@@ -37,7 +37,7 @@ SlashCommand command =
                         SlashCommandOption.createWithOptions(SlashCommandOptionType.SUB_COMMAND, "allow", "Allows a permission to a user for a channel",
                             Arrays.asList(
                                 SlashCommandOption.create(SlashCommandOptionType.CHANNEL, "channel", "The channel to modify", true),
-                                SlashCommandOption.create(SlashCommandOptionType.USER, "user", "The user which permissions should be changed", true),
+                                SlashCommandOption.create(SlashCommandOptionType.USER, "user", "The user whose permissions should be changed", true),
                                 SlashCommandOption.createWithChoices(SlashCommandOptionType.DECIMAL, "permission", "The permission to allow", true,
                                     Arrays.asList(
                                         SlashCommandOptionChoice.create("manage", 0),
