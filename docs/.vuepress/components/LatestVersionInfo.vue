@@ -15,7 +15,7 @@
 
 <script>
     const LATEST_VERSION_API_URL = "https://docs.javacord.org/rest/latest-version/release";
-    const LATEST_VERSION_BADGE = "https://shields.javacord.org/github/release/Javacord/Javacord.svg?label=Latest%20Version&colorB=brightgreen&style=flat-square";
+    const LATEST_VERSION_BADGE = "https://shields.io/github/release/Javacord/Javacord.svg?label=Latest%20Version&colorB=brightgreen&style=flat-square";
 
     module.exports = {
         data: function() {
