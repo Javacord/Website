@@ -80,7 +80,7 @@ Unlike the token, you don't have to keep your client id secret
 
 Just use the following link and replace `123456789` with your own client id.
 
-**https://discord.com/api/oauth2/authorize?client_id=123456789&scope=bot&permissions=0**
+**https://discord.com/api/oauth2/authorize?client_id=123456789&scope=applications.commands%20bot&permissions=0**
 
 You can calculate the permissions (in the link above it's the `0`) on the page where you created the bot:
 
