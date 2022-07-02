@@ -1,0 +1,3 @@
+[submodule "Javacord"]
+	path = Javacord
+	url = https://github.com/Javacord/Javacord

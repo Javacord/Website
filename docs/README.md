@@ -3,8 +3,10 @@ home: true
 heroImage: /img/javacord3_banner.png
 heroText: null
 tagline: An easy to use multithreaded library for creating Discord bots in Java.
-actionText: View Wiki →
-actionLink: /wiki/
+actions:
+  - text: View Wiki →
+    link: /wiki/
+    type: primary
 ---
 
 ## :bulb: About Javacord
@@ -30,4 +32,4 @@ Did you know that Javacord has a Discord server?
 No? Well, now you do! :wink:
 
 Javacord's Discord community is an excellent resource if you have questions about the library.
-You can join it by clicking :point_right: [**here**](https://discord.gg/0qJ2jjyneLEgG7y3) :point_left:.
+You can join it by clicking :point_right: [**here**](https://discord.gg/javacord) :point_left:.

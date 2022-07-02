@@ -1,5 +1,7 @@
 # VuePress
 docs/.vuepress/dist
+docs/.vuepress/.temp
+docs/.vuepress/.cache
 
 # Node
 node_modules

@@ -159,91 +159,27 @@ api.bulkOverwriteGlobalSlashCommands(Arrays.asList(
 .join();
 ```
 
-## :speech_balloon: Responding to commands
-The following example responds to the previous created command to update the permissions of a channel
-``` java
-api.addSlashCommandCreateListener(event -> {
-    SlashCommandInteraction slashCommandInteraction = event.getSlashCommandInteraction();
-    ServerChannel channel = slashCommandInteraction.getOptionChannelValueByIndex(0).orElse(null);
-    User user = slashCommandInteraction.getOptionUserValueByIndex(1).orElse(null);
-    Long permissionNumber = slashCommandInteraction.getOptionLongValueByIndex(2).orElse(null);
-
-    // Update channel permissions...
-
-    slashCommandInteraction.createImmediateResponder()
-            .setContent("The channels permissions have been updated")
-            .respond();
-});
-```
-
-::: tip INFO
-Note that you have to respond withing 3 seconds, or the command will fail. If you need longer than 3 seconds you have to 
-respond with `respondLater()` which allows you to respond within 15 minutes. 
-If you respond later you can send a followup message, described below.
-:::
-
-### Sending followup messages
-Followup messages can be sent within 15 minutes after the command has been invoked. You can send as many followup messages as you want.
-``` java
-api.addSlashCommandCreateListener(event -> {
-    SlashCommandInteraction slashCommandInteraction = event.getSlashCommandInteraction();
-    slashCommandInteraction.respondLater().thenAccept(interactionOriginalResponseUpdater -> {
-        interactionOriginalResponseUpdater.setContent("You will receive the answer in a few minutes!").update();
-
-        // time < 15 minutes
-        slashCommandInteraction.createFollowupMessageBuilder()
-                .setContent("Thank you for your patience, it took a while but the answer to the universe is 42")
-                .send();
-    });
-});
-```
-
 ## :policeman: Permissions
 Permissions exist to enable / disable the usage of your commands for certain things. These things may be:
-- Globally
-- Users
-- Roles
+- Permissions
+- DMs
 
-Already when you create a command you can define whether you want to enable it by default for all server once your bot gets invited.
-By default, all commands you create are enabled for everyone. With the following code sniped you can disable your command for everyone.
-This includes users, roles, server administrators and even server owners!
+When you create a command you can specify which permissions are required to use it. 
+In addition to the required permissions, you can also specify whether the command should be available in DMs.
+
 ``` java
 SlashCommand.with("ping","Ping!")
-    .setDefaultPermission(false)
+    .setDefaultEnabledForPermissions(PermissionType.ADMINISTRATOR, PermissionType.BAN_MEMBERS)
+    //.setDefaultDisabled() Effectively the same as setDefaultEnabledForPermissions(PermissionType.ADMINISTRATOR) but this will lead to the default type by Discord.
+    .setEnabledInDms(false)
     .createGlobal(api)
     .join();
 ```
-### Updating permissions of a single command
-If you want to update the permissions of your command, you have to use the Permissions Updater.
-The following will disable the usage of a command for a user and a role:
-``` java
-long USER_ID = ...;
-long ROLE_ID = ...;
-long COMMAND_ID = ...;
+::: tip INFO
+Once your bot has been invited to a server, you can not change the permissions afterwards on this server. 
+Then it's up to the server administrators / owner to correctly set up the commands for users / roles / channels.
+:::
 
-new ApplicationCommandPermissionsUpdater(server)
-    .setPermissions(Arrays.asList(
-        ApplicationCommandPermissions.create(USER_ID, ApplicationCommandPermissionType.USER, false),
-        ApplicationCommandPermissions.create(ROLE_ID, ApplicationCommandPermissionType.ROLE, false)))
-.update(COMMAND_ID)
-.join();
-```
-
-### Updating multiple command permissions at once
-If updating multiple command permissions at once it is advised to batch overwrite them in order to do only 1 request.
-The previous code snipped converted to the batch updater look like:
-``` java
-long USER_ID = ...;
-long ROLE_ID = ...;
-long COMMAND_ID = ...;
-
-ServerSlashCommandPermissionsBuilder builder1 = new ServerSlashCommandPermissionsBuilder(COMMAND_ID,
-        SlashCommandPermissions.create(USER_ID, SlashCommandPermissionType.USER, false));
-ServerSlashCommandPermissionsBuilder builder2 = new ServerSlashCommandPermissionsBuilder(COMMAND_ID,
-        SlashCommandPermissions.create(ROLE_ID, SlashCommandPermissionType.ROLE, false));
-
-api.batchUpdateSlashCommandPermissions(server, Arrays.asList(builder1, builder2)).join();
-```
 
 ## :exclamation: Limits
 ### Registering a command

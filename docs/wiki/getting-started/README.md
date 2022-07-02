@@ -20,5 +20,5 @@ The wiki is divided into four groups:
 ## :handshake: Support
 
 While the wiki is great and covers many aspects of Javacord, we highly recommended you to join our Discord server if you have any questions:
-* Join the **[Javacord server](https://discord.gg/0qJ2jjyneLEgG7y3)** (Invite code: `0qJ2jjyneLEgG7y3`)
+* Join the **[Javacord server](https://discord.gg/javacord)**
 

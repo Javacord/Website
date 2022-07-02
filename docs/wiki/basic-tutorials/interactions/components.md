@@ -46,34 +46,3 @@ new MessageBuilder()
 ![](https://i.imgur.com/bhcGjCN.png)
 
 ![](https://i.imgur.com/ZlviGPe.png)
-
-## :speech_balloon: Responding to component interactions
-The following code snipped shows how you can respond to the previously created example:
-``` java
-api.addMessageComponentCreateListener(event -> {
-    MessageComponentInteraction messageComponentInteraction = event.getMessageComponentInteraction();
-    String customId = messageComponentInteraction.getCustomId();
-
-    switch (customId) {
-        case "success":
-            messageComponentInteraction.createImmediateResponder()
-                    .setContent("You clicked a button!")
-                    .respond();
-            break;
-        case "danger":
-            messageComponentInteraction.getMessage().ifPresent(Message::delete);
-            break;
-        case "secondary":
-            messageComponentInteraction.respondLater().thenAccept(interactionOriginalResponseUpdater -> {
-                //Code to respond after 5 minutes
-            });
-            break;
-        case "options":
-            messageComponentInteraction.createImmediateResponder()
-					.setContent("You selected an option in a select menu!")
-					.respond();
-            break;
-    }
-});
-```
-*Note: once you receive a message component interaction you* ***must*** *respond with `createImmediateResponder` to send a message or `respondLater`, otherwise the interaction will fail.*

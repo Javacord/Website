@@ -1,5 +1,5 @@
 # Eclipse + Maven
-
+<LatestVersion/>
 This tutorial provides a beginner-friendly click by click guide to set up Javacord with Eclipse and Maven.
 If you are already familiar with Eclipse and Maven, you can just see the artifact locations at [Download / Installation](/wiki/getting-started/download-installation.md).
 
@@ -44,8 +44,6 @@ We recommend to use [Intellij + Gradle](./intellij-gradle.md) unless you already
 ![](https://i.imgur.com/kbdtiLJ.png)
 
 #### **12.** Now you have to add Javacord as a dependency by editing the pom.xml file. Your file should now look like this:
-
-<LatestVersionInfo/>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
