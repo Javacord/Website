@@ -17,18 +17,6 @@ You have to replace the `...` with an instance that can be assigned to the datat
 
 For example, if you see `TextChannel channel = ...`, you have to replace `...` with an instance that is a TextChannel which you can get from the API `api.getTextChannelById(CHANNEL_ID)` (note this returns an [Optional](../essential-knowledge/optionals)\<TextChannel\>) or from an event like `messageCreateEvent.getChannel()`.
 
-## Q: How do I properly deploy my bot?
-
-When using Gradle you can apply the [`application`](https://docs.gradle.org/current/userguide/application_plugin.html) plugin. This will add a few new tasks in the `distribution` group 
-* **distTar**
-  * Creates a tar archive with your properly packaged bot. You can find it in `./build/distributions`
-* **distZip**
-  * Creates a zip archive with your properly packaged bot. You can find it in `./build/distributions`
-* **installDist**
-  * The same as the other 2 tasks but your bot will not be inside an archive. You can find it in `./build/install`
-
-After extracting your bot from an archive, execute one script in the `./bin/` folder. Either the `.bat` for a Windows and the other for a `UNIX` environment
-
 ## Q: What differs Javacord from JDA and D4J?
 
 While all 3 libraries are Wrappers for the programming language Java, they use different techniques and concepts for their API.
