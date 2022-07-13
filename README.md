@@ -81,4 +81,4 @@ Additionally, the keywords array should be updated if necessary.
 
 Adding new wiki articles is similar to editing an existing one.
 The only difference is, that you have to add the new article to the sidebar by editing the `sidebar` object in the
-[`/docs/.vuepress/config.ts`](docs/.vuepress/config.js) file.
+[`/docs/.vuepress/config.ts`](docs/.vuepress/config.ts) file.
