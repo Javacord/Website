@@ -6,7 +6,7 @@ export const botSearch = () => {
 
     return {
         name: 'bot-search-plugin',
-        onGenerated: async (app: App) => {
+        onPrepared: async (app: App) => {
             const searchIndexPath = path.resolve(app.dir.public(), 'bot-search-index.json');
             const data = app.pages
                 .filter(page => page.title)
