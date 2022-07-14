@@ -6,13 +6,14 @@ export const botSearch = () => {
 
     return {
         name: 'bot-search-plugin',
-        onPrepared: async (app: App) => {
+        onGenerated: async (app: App) => {
             const searchIndexPath = path.resolve(app.dir.public(), 'bot-search-index.json');
             const data = app.pages
                 .filter(page => page.title)
                 .map(page => ({
                     title: page.title,
                     headers: page.headers,
+                    content: page.content,
                     path: page.path,
                     keywords: (page.frontmatter || {}).keywords || []
                 }));
