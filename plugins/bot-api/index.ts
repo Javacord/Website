@@ -13,7 +13,7 @@ export const botSearch = () => {
                 .map(page => ({
                     title: page.title,
                     headers: page.headers,
-                    content: page.content,
+                    content: page.contentRendered,
                     path: page.path,
                     keywords: (page.frontmatter || {}).keywords || []
                 }));
