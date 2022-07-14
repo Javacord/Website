@@ -2,7 +2,7 @@
   "name": "javacord-website",
   "version": "1.0.0",
   "description": "The Javacord website",
-  "main": "index.js",
+  "main": "index.ts",
   "license": "Apache-2.0",
   "scripts": {
     "dev": "vuepress dev docs",

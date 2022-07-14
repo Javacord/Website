@@ -1,9 +1,10 @@
 import {defaultTheme} from '@vuepress/theme-default'
 import {searchPlugin} from '@vuepress/plugin-search'
-//import {mdEnhancePlugin} from 'vuepress-plugin-md-enhance';
-import { palettePlugin } from '@vuepress/plugin-palette'
-import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
-import {path}  from '@vuepress/utils'
+import {palettePlugin} from '@vuepress/plugin-palette'
+import {registerComponentsPlugin} from '@vuepress/plugin-register-components'
+import {path} from '@vuepress/utils'
+import {botSearch} from '../../plugins/bot-api'
+
 
 export default {
     title: 'Javacord',
@@ -122,7 +123,7 @@ export default {
         },
     },
     plugins: [
-        require('./../../plugins/bot-api'),
+        botSearch(),
         searchPlugin({
             // options
         }),
@@ -135,9 +136,5 @@ export default {
         palettePlugin({
             preset: 'sass'
         }),
-        /*mdEnhancePlugin({
-            // adds code tabs support
-            codetabs: true,
-        }),*/
     ]
 };
