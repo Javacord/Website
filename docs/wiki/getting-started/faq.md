@@ -4,6 +4,8 @@ keywords:
 - faq
 - ...
 - deploy
+- code not working
+- ask a question
 - library difference
 ---
 
@@ -16,6 +18,40 @@ Here you will find answers to some of the most asked questions.
 You have to replace the `...` with an instance that can be assigned to the datatype seen left. 
 
 For example, if you see `TextChannel channel = ...`, you have to replace `...` with an instance that is a TextChannel which you can get from the API `api.getTextChannelById(CHANNEL_ID)` (note this returns an [Optional](../essential-knowledge/optionals)\<TextChannel\>) or from an event like `messageCreateEvent.getChannel()`.
+
+## Q: Why is my code not working?
+
+There are multiple reasons why your code might not work. The most common ones are:
+
+1. Your code is not being reached. So make sure your code actually gets executed with a print statement or a debugger.
+2. Add at least [`.exceptionally(ExceptionLogger.get())`](../essential-knowledge/completable-futures.html#exceptionally) to every [CompletableFuture](../essential-knowledge/completable-futures) (like when sending a message) to show any exceptions that might come from Discord.
+3. Methods like `User#getRoles(Server)` do not return the roles of the user. To fix this make sure to add the `GUILD_MEMBERS` [intent](../basic-tutorials/gateway-intents).
+4. You are getting a `NoSuchElementException`. Congratulations, you have killed a kitten! You are most likely getting this Exception because you handle [Optionals](../essential-knowledge/optionals) wrong. Read the article on [Optionals](../essential-knowledge/optionals) to learn how to use them correctly.
+
+If none of these tips will help you, you can ask your question in our [Discord Server](https://discord.gg/javacord).
+
+### How to properly ask a question to get fast support?
+Don't ask:
+```text:no-line-numbers
+Why is my code not working?
+//Code
+```
+
+```text:no-line-numbers
+Why am I getting Exception X?
+```
+
+To ensure all information is provided that is needed to solve your issue, you should ask your question in a format like:
+```text:no-line-numbers
+I have an issue with:   YOUR_ISSUE
+I want to do:           WHAT_YOU_WANT_TO_DO
+Currently this happens: WHAT_HAPPENS_NOW
+
+//Code
+
+//Exception
+The exception is thrown in the following line(not the number): CODE_LINE
+```
 
 ## Q: What differs Javacord from JDA and D4J?
 
