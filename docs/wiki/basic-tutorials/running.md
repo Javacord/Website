@@ -244,7 +244,7 @@ These automatically generated scripts will then invoke java with your dependenci
 
 ## :poop: Building a Fat Jar
 
-Although it is an abuse of the way java works, sometimes you will be forced to create a fat jar, or an über jar. This is a jar file that contains your application and all its dependencies. This is sometimes used as a lazy way of building a convenient distribution, but should be foregone in favor of the above mentioned distributions.
+Although it is an abuse of the way java works, sometimes you will be forced to create a fat jar, or an uber jar. This is a jar file that contains your application and all its dependencies. This is sometimes used as a lazy way of building a convenient distribution, but should be foregone in favor of the above mentioned distributions.
 
 However, in some cases (more often than not Bukkit/Spigot addons) it is necessary to provide a fat jar, since the host application's loading mechanism can only handle singular jar files. If you are subject to such a case of bad design, please complain to the maintainer of whatever host application you are using, then use the following instructions to forsake all that is good and just and create a fat jar. Remember to grit your teeth the whole time.
 
