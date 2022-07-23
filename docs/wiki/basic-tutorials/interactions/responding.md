@@ -78,6 +78,23 @@ api.addSlashCommandCreateListener(event -> {
 });
 ```
 
+## Responding with a Modal
+
+A modal is a popup dialog which can be shown when responding to an interaction. It focuses the users to explicitly fill out this form to continue with the workflow.
+Currently, only the `TextInput` (`SelectMenu` has been seen working too, but is not yet officially supported) is supported.
+
+```java
+api.addMessageComponentCreateListener(event -> {
+    event.getInteraction().respondWithModal("modalId","Modal Title",
+        ActionRow.of(TextInput.create(TextInputStyle.SHORT, "text_input_id", "This is a Text Input Field")));
+});
+```
+
+Which results in
+
+![Modal](./respond_with_modal.png)
+
+
 ## :speech_balloon: SlashCommand interaction only response methods
 
 ### How to know what slash command was invoked?
