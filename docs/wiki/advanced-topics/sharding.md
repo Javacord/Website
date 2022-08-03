@@ -98,4 +98,4 @@ Sharding is forced for bots which are in more than 2500 servers.
 
 ## :sunrise_over_mountains: Sharding for Very Large Bots
 
-Sharding for very large bots (> 100,000 servers) is a bit different from "normal" sharding. Discord will contact you once your bot reaches this state. Additional information can be found in the [official Discord api documentation](https://discordapp.com/developers/docs/topics/gateway#sharding-for-very-large-bots).
+Sharding for very large bots (> 150,000 servers) is a bit different from "normal" sharding. Discord will contact you once your bot reaches this state. Additional information can be found in the [official Discord api documentation](https://discordapp.com/developers/docs/topics/gateway#sharding-for-large-bots).
