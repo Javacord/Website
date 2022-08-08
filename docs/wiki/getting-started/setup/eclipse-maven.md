@@ -1,5 +1,7 @@
 # Eclipse + Maven
-<LatestVersion/>
+<ClientOnly>
+    <LatestVersion/>
+</ClientOnly>
 This tutorial provides a beginner-friendly click by click guide to set up Javacord with Eclipse and Maven.
 If you are already familiar with Eclipse and Maven, you can just see the artifact locations at [Download / Installation](/wiki/getting-started/download-installation.md).
 

@@ -72,7 +72,9 @@ This assumes your project is set up correctly, can be built without errors, and 
 Running from the IDE is only recommended during development and strongly discouraged for production use. Generally, you'll want your build tool to create a convenient distribution format for you to use.
 
 ### Building a Distribution with Gradle
-<LatestVersion/>
+<ClientOnly>
+    <LatestVersion/>
+</ClientOnly>
 
 For Gradle, only two further steps are necessary for a basic application. On top of the steps described in the [Getting Started Section](/wiki/getting-started/intellij-gradle), also add the [Application Plugin](https://docs.gradle.org/current/userguide/application_plugin.html) and define your `mainClass` as the fully qualified name of your main class. If you're using an older version of Gradle (earlier than 6.4), the attribute is instead called `mainClassName`.
 

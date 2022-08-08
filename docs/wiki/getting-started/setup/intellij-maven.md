@@ -1,5 +1,7 @@
 # IntelliJ + Maven
-<LatestVersion/>
+<ClientOnly>
+    <LatestVersion/>
+</ClientOnly>
 
 This tutorial provides a beginner-friendly click by click guide to set up Javacord with Intellij and Maven.
 If you are already familiar with IntelliJ and Maven, you can just see the artifact locations at [Download / Installation](/wiki/getting-started/download-installation.md).

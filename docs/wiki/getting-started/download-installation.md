@@ -8,7 +8,9 @@ keywords:
 ---
 
 # Download / Installation
-<LatestVersion/>
+<ClientOnly>
+    <LatestVersion/>
+</ClientOnly>
 
 The recommended way to get Javacord is to use a build manager, like Gradle or Maven.  
 If you are not familiar with build managers, you can follow one of the beginner ide setup guides (see navigation) or
