@@ -30,6 +30,7 @@ Below you can find a table with all intents supported by Discord.
 | `DIRECT_MESSAGES`          | :heavy_check_mark: | :x:                |
 | `DIRECT_MESSAGE_REACTIONS` | :heavy_check_mark: | :x:                |
 | `DIRECT_MESSAGE_TYPING`    | :heavy_check_mark: | :x:                |
+| `MESSAGE_CONTENT`          | :heavy_check_mark: | :heavy_check_mark: |
 
 \* Will most likely work, but needs further testing
 
