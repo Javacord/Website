@@ -13,6 +13,10 @@ keywords:
 
 Here you will find answers to some of the most asked questions.
 
+## Q: Why do I receive empty (no content) messages in i.e. the MessageCreateListener?
+
+You are missing the privileged `MESSAGE_CONTENT` intent. For more information of how to enable privileged intents and enable them in your code see [Gateway Intents](../basic-tutorials/gateway-intents.md).  
+
 ## Q: What is `...` in the code examples?
 
 You have to replace the `...` with an instance that can be assigned to the datatype seen left. 
