@@ -115,10 +115,10 @@ api.addSlashCommandCreateListener(event -> {
 ```java
 api.addAutocompleteCreateListener(event -> {
     event.getAutocompleteInteraction()
-        .respondWithChoices(Arrays.asList(
-            SlashCommandOptionChoice.create("one", 1),
+    .respondWithChoices(Arrays.asList(
+        SlashCommandOptionChoice.create("one", 1),
             SlashCommandOptionChoice.create("two", 2))
-        .respond();
+    );
 });
 ```
 
