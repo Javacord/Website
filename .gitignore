@@ -9,3 +9,6 @@ yarn-error.log
 
 # IntelliJ
 .idea
+
+# Search Index created at runtime
+/docs/.vuepress/public/bot-search-index.json
