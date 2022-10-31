@@ -58,6 +58,7 @@ export default {
                             text: 'Interactions',
                             collapsible: true,
                             children: [
+                                '/wiki/basic-tutorials/interactions/overview',
                                 '/wiki/basic-tutorials/interactions/commands',
                                 '/wiki/basic-tutorials/interactions/components',
                                 '/wiki/basic-tutorials/interactions/responding'
