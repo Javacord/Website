@@ -8,7 +8,7 @@ To enable this privileged intent please see the [Gateway Intents](../basic-tutor
 
 ::: tip Slash Commands
 Generally it is recommended to use [Slash Commands](../basic-tutorials/interactions/commands.md) instead of text commands because they offer many advantages
-like auto-completion, fixed and optional arguments, different kind of argument built with built-in types: numbers(with ranges), text, channel and a lot more.
+like auto-completion, fixed and optional arguments, different kind of arguments with built-in types: numbers(with ranges), text, channel and a lot more.
 :::
 
 ## :key: Log the bot in
