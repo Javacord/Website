@@ -13,26 +13,26 @@ Disabling intents that are not required for your bot can significantly increase 
 
 Below you can find a table with all intents supported by Discord.
 
-| Intent                         | Safe to Disable    | Privileged         |
-|--------------------------------|--------------------|--------------------|
-| `GUILDS`                       | :x:                | :x:                |
-| `GUILD_MEMBERS`                | :heavy_check_mark: | :heavy_check_mark: |
-| `GUILD_BANS`                   | :warning:\*        | :x:                |
-| `GUILD_EMOJIS`                 | :warning:\*        | :x:                |
-| `GUILD_INTEGRATIONS`           | :heavy_check_mark: | :x:                |
-| `GUILD_WEBHOOKS`               | :heavy_check_mark: | :x:                |
-| `GUILD_INVITES`                | :heavy_check_mark: | :x:                |
-| `GUILD_VOICE_STATES`           | :warning:\*        | :x:                |
-| `GUILD_PRESENCES`              | :heavy_check_mark: | :heavy_check_mark: |
-| `GUILD_MESSAGES`               | :heavy_check_mark: | :x:                |
-| `GUILD_MESSAGE_REACTIONS`      | :heavy_check_mark: | :x:                |
-| `GUILD_MESSAGE_TYPING`         | :heavy_check_mark: | :x:                |
-| `DIRECT_MESSAGES`              | :heavy_check_mark: | :x:                |
-| `DIRECT_MESSAGE_REACTIONS`     | :heavy_check_mark: | :x:                |
-| `DIRECT_MESSAGE_TYPING`        | :heavy_check_mark: | :x:                |
-| `MESSAGE_CONTENT`              | :heavy_check_mark: | :heavy_check_mark: |
-| `AUTO_MODERATION_CONFIGURATION`| :heavy_check_mark: | :x:                |
-| `AUTO_MODERATION_EXECUTION`    | :heavy_check_mark: | :x:                |
+| Intent                           | Safe to Disable    | Privileged         |
+|----------------------------------|--------------------|--------------------|
+| `GUILDS`                         | :x:                | :x:                |
+| `GUILD_MEMBERS`                  | :heavy_check_mark: | :heavy_check_mark: |
+| `GUILD_BANS`                     | :warning:\*        | :x:                |
+| `GUILD_EMOJIS`                   | :warning:\*        | :x:                |
+| `GUILD_INTEGRATIONS`             | :heavy_check_mark: | :x:                |
+| `GUILD_WEBHOOKS`                 | :heavy_check_mark: | :x:                |
+| `GUILD_INVITES`                  | :heavy_check_mark: | :x:                |
+| `GUILD_VOICE_STATES`             | :warning:\*        | :x:                |
+| `GUILD_PRESENCES`                | :heavy_check_mark: | :heavy_check_mark: |
+| `GUILD_MESSAGES`                 | :heavy_check_mark: | :x:                |
+| `GUILD_MESSAGE_REACTIONS`        | :heavy_check_mark: | :x:                |
+| `GUILD_MESSAGE_TYPING`           | :heavy_check_mark: | :x:                |
+| `DIRECT_MESSAGES`                | :heavy_check_mark: | :x:                |
+| `DIRECT_MESSAGE_REACTIONS`       | :heavy_check_mark: | :x:                |
+| `DIRECT_MESSAGE_TYPING`          | :heavy_check_mark: | :x:                |
+| `MESSAGE_CONTENT`                | :heavy_check_mark: | :heavy_check_mark: |
+| `AUTO_MODERATION_CONFIGURATION`  | :heavy_check_mark: | :x:                |
+| `AUTO_MODERATION_EXECUTION`      | :heavy_check_mark: | :x:                |
 
 
 \* Will most likely work, but needs further testing
@@ -83,6 +83,12 @@ It is advised against setting `DiscordApiBuilder#setWaitForAllUsersOnStartup(tru
 This intent is required to keep all users in Javacord's cache.
 Without this intent, methods like `Server#getMembers()` or `DiscordApi#getCachedUsers()` will return empty collections.
 However, you will still be able to access users from objects like messages, e.g. `Message#getUserAuthor()` will still work.
+
+### `MESSAGE_CONTENT`
+
+This intent is a bit different to the other as it does not act as a toggle to receive any events. 
+It's sole purpose is to receive the message content, attachments, components, and embeds.
+Otherwise, these fields will be empty when you receive a `Message` object.
 
 ## :gear: Setting Intents
 
@@ -147,6 +153,19 @@ This method only enables the given intents.
 DiscordApi api = new DiscordApiBuilder()
     .setToken("topc secret")
     .setIntents(Intent.GUILDS, Intent.DIRECT_MESSAGES)
+    .login()
+    .join();
+```
+
+### Add Intents
+
+This method adds the intents to the currently enabled ones(by default all non-privileged).
+This is useful i.e. if you only want to enable 1 privileged intent like the `MESSAGE_CONTENT` 
+
+```java
+DiscordApi api = new DiscordApiBuilder()
+    .setToken("topc secret")
+    .addIntents(Intent.MESSAGE_CONTENT)
     .login()
     .join();
 ```
