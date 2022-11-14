@@ -153,10 +153,11 @@ If you have to update / create multiple commands at once it advised to use the b
 ``` java
 DiscordApi api = ...;
 
-api.bulkOverwriteGlobalSlashCommands(Arrays.asList(
-    new SlashCommandBuilder().setName("server").setDescription("A command for the server"),
-    new SlashCommandBuilder().setName("permission").setDescription("A command for permissions")))
-.join();
+Set<SlashCommandBuilder> builders = new HashSet<>();
+builders.add(new SlashCommandBuilder().setName("server").setDescription("A command for the server"));
+builders.add(new SlashCommandBuilder().setName("permission").setDescription("A command for permissions"))
+                                
+api.bulkOverwriteGlobalApplicationCommands(builders).join();
 ```
 
 ## :policeman: Permissions
