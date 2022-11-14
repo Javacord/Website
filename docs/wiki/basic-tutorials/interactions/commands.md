@@ -155,7 +155,7 @@ DiscordApi api = ...;
 
 Set<SlashCommandBuilder> builders = new HashSet<>();
 builders.add(new SlashCommandBuilder().setName("server").setDescription("A command for the server"));
-builders.add(new SlashCommandBuilder().setName("permission").setDescription("A command for permissions"))
+builders.add(new SlashCommandBuilder().setName("permission").setDescription("A command for permissions"));
                                 
 api.bulkOverwriteGlobalApplicationCommands(builders).join();
 ```
