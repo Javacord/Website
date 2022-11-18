@@ -123,5 +123,5 @@ playerManager.loadItem("https://www.youtube.com/watch?v=NvS351QKFV4", new AudioL
     public void loadFailed(FriendlyException throwable) {
         // Notify the user that everything exploded
     }
-}
+});
 ```
