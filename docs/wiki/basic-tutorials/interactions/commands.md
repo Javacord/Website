@@ -125,12 +125,12 @@ command
 ## :arrow_heading_down: Get your commands
 All global commands:
 ``` java
-List<SlashCommand> commands = api.getGlobalSlashCommands().join();
+Set<SlashCommand> commands = api.getGlobalSlashCommands().join();
 ```
 All commands only available on a single server:
 ``` java
 Server server = ...;
-List<SlashCommand> commands = api.getServerSlashCommands(server).join();
+Set<SlashCommand> commands = api.getServerSlashCommands(server).join();
 ```
 ::: warning
 Getting all commands from a server only contains the commands you have created on this specific server. 
