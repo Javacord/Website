@@ -23,6 +23,11 @@ event.getInteraction()
 ::: tip INFO
 Note that you have to respond withing 3 seconds, or the command will fail. If you need longer than 3 seconds you have to
 respond with `respondLater()` which allows you to respond within 15 minutes.
+
+Because of this time limitation, sending any files when using `createImmediateResponder` is not possible.
+It's best to use the `respondLater` functionality of interactions.
+In case you really don't want to use `respondLater`. You can send a web link of the image.
+You can use the methodes that use online hosting. Like discords own cdn an example link is this:`https://cdn.discordapp.com/embed/avatars/0.png`.
 :::
 
 When you want to respond ephemerally, you can use the `setFlags` method. Your new responder would look like the
