@@ -23,6 +23,10 @@ event.getInteraction()
 ::: tip INFO
 Note that you have to respond withing 3 seconds, or the command will fail. If you need longer than 3 seconds you have to
 respond with `respondLater()` which allows you to respond within 15 minutes.
+
+Because of this time limitation, sending any files when creating an immediate response is not possible.
+If you want a file to be embedded either use `respondLater` or include a web link in the message content.
+Depending on the media type of the link and the server configuration, Discord will then display an appropriate embed for the file.
 :::
 
 When you want to respond ephemerally, you can use the `setFlags` method. Your new responder would look like the
