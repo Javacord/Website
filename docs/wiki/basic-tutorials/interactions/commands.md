@@ -91,6 +91,17 @@ command
     |
     |__ subcommand
 
+----
+
+VALID
+
+command
+|
+|__ subcommand-group
+    |
+    |__ subcommand
+|
+|__ subcommand
 
 -------
 
