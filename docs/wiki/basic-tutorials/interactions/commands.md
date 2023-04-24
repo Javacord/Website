@@ -200,6 +200,7 @@ Then it's up to the server administrators / owner to correctly set up the comman
 - Your app cannot have two server commands within the same name on the same guild
 - Your app can have a global and guild command with the same name
 - Multiple apps can have commands with the same names
+- Command names and command option names must match the following regex `^[\w-]{1,32}$` with the unicode flag set.
 ### General
 - An app can have up to 100 top-level global commands with unique names
 - An app can have up to an additional 100 server commands per server
