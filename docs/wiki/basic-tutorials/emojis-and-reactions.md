@@ -92,7 +92,7 @@ Known custom emojis are emojis that the bot knows because it's a member of the s
 
 ## :ok_hand: Recommended libraries
 
-If you are working a lot with Unicode emojis, it's recommended to use a library like [emoji-java](https://github.com/vdurmont/emoji-java). It enables you to do things like the following:
+If you are working a lot with Unicode emojis, it's recommended to use a library like [JEmoji](https://github.com/felldo/JEmoji). It enables you to do things like the following:
 ```java
-message.addReaction(EmojiParser.parseToUnicode(":thumbsup:"));
+message.addReaction(EmojiManager.getByAlias(":thumbsup:"));
 ```
