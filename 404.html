@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.49">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <link rel="icon" href="/favicon-96x96.png"><title>Javacord</title><meta name="description" content="The Javacord website">
+    <link rel="modulepreload" href="/assets/app.151ccb98.js"><link rel="modulepreload" href="/assets/404.html.796e6b78.js"><link rel="modulepreload" href="/assets/404.html.7d858b3d.js"><link rel="prefetch" href="/assets/index.html.70af15a3.js"><link rel="prefetch" href="/assets/imprint.html.aa34b88a.js"><link rel="prefetch" href="/assets/privacy-policy.html.e6350755.js"><link rel="prefetch" href="/assets/bot-lifecycle.html.bc8486a5.js"><link rel="prefetch" href="/assets/entity-cache.html.d35078da.js"><link rel="prefetch" href="/assets/performance-tweaks.html.1ed90e55.js"><link rel="prefetch" href="/assets/playing-audio.html.15139e1b.js"><link rel="prefetch" href="/assets/proxies.html.b2817cee.js"><link rel="prefetch" href="/assets/ratelimits.html.4f60547f.js"><link rel="prefetch" href="/assets/sharding.html.d6f88b19.js"><link rel="prefetch" href="/assets/creating-entities.html.d4566e7e.js"><link rel="prefetch" href="/assets/embeds.html.68dc7509.js"><link rel="prefetch" href="/assets/emojis-and-reactions.html.7f613dfc.js"><link rel="prefetch" href="/assets/gateway-intents.html.96026c66.js"><link rel="prefetch" href="/assets/glossary.html.34f5fdb3.js"><link rel="prefetch" href="/assets/listeners.html.0ec76197.js"><link rel="prefetch" href="/assets/logger-config.html.c3000dce.js"><link rel="prefetch" href="/assets/message-builder.html.02c7cb1d.js"><link rel="prefetch" href="/assets/running.html.15e65516.js"><link rel="prefetch" href="/assets/completable-futures.html.4bcb806c.js"><link rel="prefetch" href="/assets/lambdas.html.83e4c5bc.js"><link rel="prefetch" href="/assets/optionals.html.b4abca2e.js"><link rel="prefetch" href="/assets/index.html.6c396006.js"><link rel="prefetch" href="/assets/creating-a-bot-account.html.d48fba04.js"><link rel="prefetch" href="/assets/download-installation.html.2a3aecfd.js"><link rel="prefetch" href="/assets/faq.html.daf42ee7.js"><link rel="prefetch" href="/assets/writing-your-first-bot.html.ab95f1ba.js"><link rel="prefetch" href="/assets/commands.html.2011a310.js"><link rel="prefetch" href="/assets/components.html.604ea486.js"><link rel="prefetch" href="/assets/overview.html.d664223d.js"><link rel="prefetch" href="/assets/responding.html.3c5c7e21.js"><link rel="prefetch" href="/assets/eclipse-maven.html.04415d3e.js"><link rel="prefetch" href="/assets/intellij-gradle.html.9ec9aa86.js"><link rel="prefetch" href="/assets/intellij-maven.html.8bb18166.js"><link rel="prefetch" href="/assets/index.html.07810de0.js"><link rel="prefetch" href="/assets/imprint.html.8c064aa1.js"><link rel="prefetch" href="/assets/privacy-policy.html.2b93162c.js"><link rel="prefetch" href="/assets/bot-lifecycle.html.89b6bce4.js"><link rel="prefetch" href="/assets/entity-cache.html.40152af2.js"><link rel="prefetch" href="/assets/performance-tweaks.html.909e9a4b.js"><link rel="prefetch" href="/assets/playing-audio.html.1204e1b2.js"><link rel="prefetch" href="/assets/proxies.html.b9736f17.js"><link rel="prefetch" href="/assets/ratelimits.html.a990bfd1.js"><link rel="prefetch" href="/assets/sharding.html.592f58f7.js"><link rel="prefetch" href="/assets/creating-entities.html.ee81cd24.js"><link rel="prefetch" href="/assets/embeds.html.f7a6f54c.js"><link rel="prefetch" href="/assets/emojis-and-reactions.html.ce8f0b41.js"><link rel="prefetch" href="/assets/gateway-intents.html.ef5cc4b3.js"><link rel="prefetch" href="/assets/glossary.html.28351d5a.js"><link rel="prefetch" href="/assets/listeners.html.86bff751.js"><link rel="prefetch" href="/assets/logger-config.html.f8d1f3ef.js"><link rel="prefetch" href="/assets/message-builder.html.2ab31ad9.js"><link rel="prefetch" href="/assets/running.html.1784634d.js"><link rel="prefetch" href="/assets/completable-futures.html.7db4d585.js"><link rel="prefetch" href="/assets/lambdas.html.c0cde88c.js"><link rel="prefetch" href="/assets/optionals.html.3b46a951.js"><link rel="prefetch" href="/assets/index.html.8c8749ec.js"><link rel="prefetch" href="/assets/creating-a-bot-account.html.c9939e16.js"><link rel="prefetch" href="/assets/download-installation.html.de5b4efd.js"><link rel="prefetch" href="/assets/faq.html.fe40474c.js"><link rel="prefetch" href="/assets/writing-your-first-bot.html.3edd185d.js"><link rel="prefetch" href="/assets/commands.html.aeac4b05.js"><link rel="prefetch" href="/assets/components.html.e89a60b6.js"><link rel="prefetch" href="/assets/overview.html.53b5f728.js"><link rel="prefetch" href="/assets/responding.html.a1a19125.js"><link rel="prefetch" href="/assets/eclipse-maven.html.c65d8d94.js"><link rel="prefetch" href="/assets/intellij-gradle.html.4d5164dd.js"><link rel="prefetch" href="/assets/intellij-maven.html.74a49f6d.js"><link rel="prefetch" href="/assets/404.72d4030e.js"><link rel="prefetch" href="/assets/Layout.85f3b300.js"><link rel="prefetch" href="/assets/LatestVersion.3ddaef1d.js">
+    <link rel="stylesheet" href="/assets/style.18d74fae.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><main class="page"><div class="theme-default-content"><h1>404</h1><blockquote>That&#39;s a Four-Oh-Four.</blockquote><a href="/" class="">Take me home</a></div></main></div><!----><!--]--></div>
+    <script type="module" src="/assets/app.151ccb98.js" defer></script>
+  </body>
+</html>

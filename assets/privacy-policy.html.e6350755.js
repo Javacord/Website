@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-b106f6ee","path":"/privacy-policy.html","title":"Privacy Policy","lang":"en-US","frontmatter":{"search":false},"excerpt":"","headers":[],"git":{"updatedTime":1692105785000,"contributors":[{"name":"Dominic Fellbaum","email":"d.fellbaum@hotmail.de","commits":1}]},"filePathRelative":"privacy-policy.md"}');export{e as data};
